@@ -1,16 +1,11 @@
-
-#fondo{
-    background-color: rgba(0, 0, 0, .8);
-    background: url("../Img/personas-corriendo.jpg") no-repeat;
-    position: relative;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;   
+body{
+    background: url("../img/personas-corriendo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover
 }
-#fondo:before {
+body:before{
     content: "";
-    background: rgba(6, 12, 34, 0.8);
+    background: rgba(0, 0, 0, 0.80);
     position: absolute;
     bottom: 0;
     top: 0;
@@ -24,3 +19,26 @@ img{
     width: 100px;
     height: 50px;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0, 0);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: yellow;
+  }

@@ -1,7 +1,7 @@
 body{
     background: url("../img/personas-corriendo.jpg");
     background-repeat: no-repeat;
-    background-size: cover
+    background-size: cover;
 }
 body:before{
     content: "";
@@ -13,32 +13,39 @@ body:before{
     right: 0;
     z-index: -1;
 }
-img{
-    padding-top: 10px;
-    padding-left: 40px;
-    width: 100px;
-    height: 50px;
+#logo{
+  width: 100px;
+  height: 50px;
+}
+#navbar{
+  float: right;
 }
 ul {
+    font-display: Verdana;
+    font-size: 24px;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px;
+    text-indent: 150px;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0, 0);
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: yellow;
-  }
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: yellow;
+}
+#logo{
+  position: sticky;
+
+}

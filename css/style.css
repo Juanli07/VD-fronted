@@ -20,6 +20,7 @@ body{
 
 h1, h2, h3, h4{
   font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 /*Escala de titulos*/
@@ -44,15 +45,13 @@ img{
 /*header*/
 .site-header{
   background-image: linear-gradient(
-        rgba(25, 209, 231, 0.5),
-        rgba(243, 17, 224, 0.5)
+        rgba(000, 000, 000, 0.5),
+        rgba(72, 130, 148, 0.8)
       ),
    url(../img/personas-corriendo.jpg); 
   height: 100vh;
   background-size: cover;   
 }
-
-
 .contenido-header{
   display: flex;
   justify-content: space-between;
@@ -61,12 +60,27 @@ img{
 }
 #logo{
   width: 150px;  
-  margin-top:1rem;
 }
 .menu a{
   color: white;
   text-decoration: none;
   font-size: 1.3rem;
   margin-right: 2rem;
-  display:blocks ;
+  
+}
+.arriba{
+  margin-top: 2rem;
+}
+.boton{    
+    margin: 0 5px;    
+}
+.boton:hover{
+  cursor: pointer;
+  background: yellow;
+  padding: 1rem;
+  border-radius: 10%;
+  font-weight: 900;  
+}
+.enc-color{
+  color: white;
 }

@@ -11,6 +11,11 @@ body{
 }
 .contenido-centrado{
   max-width: 90%;
+  text-align: center;
+
+}
+.centrar-texto{
+  text-align: center;7
 }
 
 h1, h2, h3, h4{
@@ -38,15 +43,30 @@ img{
 
 /*header*/
 .site-header{
-  background-image: url(../img/personas-corriendo.jpg);
-  background-position: center center;
-  background-size: cover;
+  background-image: linear-gradient(
+        rgba(25, 209, 231, 0.5),
+        rgba(243, 17, 224, 0.5)
+      ),
+   url(../img/personas-corriendo.jpg); 
   height: 100vh;
-  
+  background-size: cover;   
 }
+
+
 .contenido-header{
   display: flex;
   justify-content: space-between;
   text-align: center;
   flex: 0 0 calc(30% - 3rem);
+}
+#logo{
+  width: 150px;  
+  margin-top:1rem;
+}
+.menu a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin-right: 2rem;
+  display:blocks ;
 }

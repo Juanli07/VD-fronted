@@ -1,44 +1,86 @@
+/*Globales*/
 body{
-    background: url("../img/personas-corriendo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5rem;  
 }
-body:before{
-    content: "";
-    background: rgba(0, 0, 0, 0.80);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+
+.contenedor{
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;  
 }
+.contenido-centrado{
+  max-width: 90%;
+  text-align: center;
+
+}
+.centrar-texto{
+  text-align: center;7
+}
+
+h1, h2, h3, h4{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+/*Escala de titulos*/
+h1{
+  font-size: 5rem;
+}
+h2{
+  font-size: 4.5rem;
+}
+h3{
+  font-size: 3.9rem;
+}
+h4{
+  font-size: 3.4rem;
+}
+
 img{
-    padding-top: 10px;
-    padding-left: 40px;
-    width: 100px;
-    height: 50px;
+  max-width: 100%;
 }
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0, 0);
-  }
+
+
+/*header*/
+.site-header{
+  background-image: linear-gradient(
+        rgba(000, 000, 000, 0.5),
+        rgba(72, 130, 148, 0.8)
+      ),
+   url(../img/personas-corriendo.jpg); 
+  height: 100vh;
+  background-size: cover;   
+}
+.contenido-header{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex: 0 0 calc(30% - 3rem);
+}
+#logo{
+  width: 150px;  
+}
+.menu a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin-right: 2rem;
   
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: yellow;
-  }
+}
+.arriba{
+  margin-top: 2rem;
+}
+.boton{    
+    margin: 0 5px;    
+}
+.boton:hover{
+  cursor: pointer;
+  background: yellow;
+  padding: 1rem;
+  border-radius: 10%;
+  font-weight: 900;  
+}
+.enc-color{
+  color: white;
+}

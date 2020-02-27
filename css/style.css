@@ -7,11 +7,11 @@ body{
 
 .contenedor{
   max-width: 1200px;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;  
 }
 .contenido-centrado{
-  max-width: 90%;
+  max-width: 100%;
   text-align: center;
 
 }
@@ -59,10 +59,11 @@ img{
 .contenido-header{
   display: flex;
   justify-content: space-between;
-  text-align: center;  
+  text-align: center;    
   
 }
 #logo{
+  margin: 0 0 2rem 6rem ;
   width: 150px;  
 }
 .menu a{
@@ -79,14 +80,20 @@ img{
     margin: 0 5px;   
     text-decoration: none; 
 }
-.boton:hover{
-  
+.boton:hover{  
   cursor: pointer;
   background: yellow;
   padding: 1rem;
   border-radius: 10%;
   font-weight: 900;  
 }
+
+.nav-float{  
+  background: rgba(0,0,0,.2) ;     
+  z-index: 100;  
+  position: fixed;  
+}
+
 
 /*contenido del main */
 .principal{
@@ -135,7 +142,7 @@ img{
 }
 
 .pie div p{
-  margin: 20px 100px;
+  margin: 2rem 12rem;
 }
 
 

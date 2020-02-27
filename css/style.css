@@ -83,6 +83,7 @@ img{
 }
 .arriba{
   margin-top: 2rem;
+  text-decoration: none;
 }
 .boton{    
     margin: 0 5px;   
@@ -178,3 +179,31 @@ img{
   color: aquamarine;
 }
 
+/* Pagina servicios*/
+.body-servicios{
+  background-image:linear-gradient(
+    rgba(000, 000, 000, 0.2),
+    rgba(000, 000, 000, 0.2)
+  ),
+  url(../img/servicios.jpeg);
+  height: 100vh; 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;    
+}
+
+.contenedor-servicios{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.servicio{
+  flex: 0 0 calc(20% - 1rem);  
+  background-color:  rgba(0,0,0,.5);  
+  text-align: center;
+  height: 250px;  
+}
+
+.contenido-servicio{
+ margin-top: 40px;
+}

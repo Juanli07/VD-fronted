@@ -26,6 +26,12 @@ body{
   text-align: center;
 }
 
+.contenedor-70{
+  max-width: 70%;
+  text-align: center center;
+  margin: 0 auto;
+}
+
 
 h1, h2, h3, h4{
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -165,19 +171,30 @@ img{
 .formulario{
   width: 400px;
   height: 350px;
-  border: solid black 1px;  
   background: rgba(0,0,0,.3) ;     
 }
 .bordear{
-  margin-top: -2.5rem;
+  margin-top: 2rem; 
+  
+  
 }
-#body-ingresar{
-  background: #E8C31E;
+.body-ingresar{  
+  background: #FFD101;
 }
+
+.fondo-ingresar{  
+  width: 100%;
+  height: 70vh;  
+  background-image: url(../img/fondo-ingresar.png);
+  background-repeat: no-repeat;
+  background-position: center;  
+}
+
 .simple{
   text-decoration: none;
   color: aquamarine;
 }
+
 
 /* Pagina servicios*/
 .body-servicios{
@@ -197,13 +214,57 @@ img{
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .servicio{
-  flex: 0 0 calc(20% - 1rem);  
-  background-color:  rgba(0,0,0,.5);  
+  flex: 0 0 calc(20% - .5rem);  
+  background-color:  rgba(252, 252, 252, 0.3);  
   text-align: center;
-  height: 250px;  
+  height: 250px; 
+  transition: width .5s, height .5s, margin .5s;
+}
+
+.servicio:hover{  
+  flex: 1 1 calc(20% - 2rem);  
+  height: 265px;
+  margin: 0 auto;
+  background-color: white;  
+  cursor: pointer;    
 }
 
 .contenido-servicio{
  margin-top: 40px;
+}
+
+/*pagina eventos*/
+.site-header-eventos{
+  background-image: linear-gradient(
+       rgba(000, 000, 000, 0.5),
+       rgba(000, 000, 000, 0.8)
+     ),
+  url(../img/personas-corriendo.jpg);
+ height: 100vh;    
+ max-height: 145px;
+ background-size: cover;   
+}
+
+.eventos{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.entrada-evento{
+  flex-basis: calc(30% - 1rem);
+  height: 400px;
+  border: black solid 1px;
+  margin: 1rem ;
+  text-align: center;
+
+}
+.entrada-evento img{
+  width: 90%;
+  height: 60%;  
+}
+.entrada-evento p{
+  font-size: 1rem;
+  
 }

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="js/index.js"></script>
 </head>
-<body id="body-ingresar">
+<body class="body-ingresar">
     <header  class="header-ingresar">
         <div  class="contenedor contenido-header contenido-centrado nav-float">           
                 <a href="../index.html" class="arriba">
@@ -24,25 +24,29 @@
                 </nav>                       
         </div>        
     </header>
-    <main class="contenedor">
-        
-        <div class="centrar-cuadro centrar-texto formulario">    
-                <p class="bordear"><span class="fas fa-user fa-3x" ></span></p>        
-            <form action="#">
-                <div class="registro">
-                    <label for="nombre"></label>
-                    <input type="text" id="nombre" placeholder="Usuario">
-                </div>
-                <div class="registro">
-                    <label for="password"></label>
-                    <input type="password" id="password" placeholder="********">
-                </div>
-                <div class="registro">
-                        <input type="submit" value="Acceder">
-                </div>  
-                <a href="#" class="simple">¿Olvido su contraseña?</a>
-            </form>                   
-        </div>
-    </main>
+
+    <div class="fondo-ingresar centrar-cuadro contenedor">
+        <main class="contenedor">        
+                    <div class="centrar-cuadro centrar-texto formulario">    
+                    <p class="bordear"><span class="fas fa-user fa-3x" ></span></p>          
+                    <form action="#">
+                        <div class="registro">
+                            <label for="nombre"></label>
+                            <input type="text" id="nombre" placeholder="Usuario">
+                        </div>
+                            <div class="registro">
+                            <div class="registro">
+                            <label for="password"></label>
+                            <input type="password" id="password" placeholder="********">
+                        </div>
+                    <input type="submit" value="Acceder">
+                        </div>  
+                        <a href="#" class="simple">¿Olvido su contraseña?</a>
+                    </form>                   
+                </div>    
+            
+            </main>
+    </div>
+   
 </body>
 </html>

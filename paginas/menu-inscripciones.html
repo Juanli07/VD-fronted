@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vive Deportes</title>    
+    <link href="https://fonts.googleapis.com/css?family=Patua+One|Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">    
+    
+    
+<body class="">
+    <header  class="header-ingresar">
+        <div  class="contenedor contenido-header contenido-centrado nav-float">           
+                <a href="../index.html" class="arriba">
+                    <img id="logo" src="../img/logo.png" alt="Logo vive deporte">
+                </a>     
+                <nav class="menu arriba">                
+                    <a href="../paginas/eventos.html" class="boton">Eventos</a>
+                    <a href="../paginas/servicios.html" class="boton">Servicios</a>
+                    <a href="../paginas/ingresar.html" class="boton-i">Ingresar</a>
+                </nav>                       
+        </div>        
+    </header>
+    <main class="contenedor">
+        <div class="menu-in">
+            <button class="pestanas" onclick="abrirPestana(event, 'Inscripcion')">Inscripciones</button>
+            <button class="pestanas" onclick="abrirPestana(event, 'Kits')">Kits</button>
+            <button class="pestanas" onclick="abrirPestana(event, 'Ingresos')">Ingresos</button>
+        </div>
+
+          <div   id="Inscripcion" class="tabcontent">
+              <h2>Formulario de inscriones</h2>
+          </div>
+          <div   id="Kits"  class="tabcontent">
+             <h2>Formulario de kits</h2>
+          </div>
+          <div   id="Ingresos"  class="tabcontent">
+              <h2>Formulario de ingresos</h2>
+          </div>
+
+    </main>
+    <script src="../js/pestanas.js"></script>
+</body>
+
+</html>

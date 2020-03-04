@@ -308,3 +308,33 @@ img{
   text-transform: uppercase;
   margin-left: 1rem;
 }
+
+/*Pestañas de inscripciones*/
+.menu-in {
+  overflow: hidden;    
+}
+
+.menu-in button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 3px 5rem;
+  transition: 0.3s;
+  font-size: 1.8rem;
+}
+
+.menu-in button:hover {
+  background-color: #dddddd;
+}
+
+.menu-in button.active {
+  background-color: #FFD101;
+}
+
+.tabcontent {
+  display: none;
+  padding: 1rem 1.2rem;  
+  border-top: none;
+}

@@ -23,7 +23,8 @@ body{
 }
 .contenedor-90{  
   max-width: 90%;
-  text-align: center;
+  text-align: center center;
+  margin    : 0 auto;
 }
 
 .contenedor-70{
@@ -49,7 +50,7 @@ h3{
   font-size: 3.9rem;
 }
 h4{
-  font-size: 3.4rem;
+  font-size: 2rem;
 }
 
 img{
@@ -71,6 +72,7 @@ img{
   background-position: center center;
   background-attachment: fixed;
   filter: brightness(.6);
+  
 }
 .fondo-p{
   position: relative;
@@ -85,8 +87,7 @@ img{
 .contenido-header{
   display: flex;
   justify-content: space-between;
-  text-align: center;    
-  
+  text-align: center;      
 }
 #logo{
   margin: 0 0 2rem 6rem ;
@@ -172,10 +173,11 @@ img{
 }
 
 /*pie de pagina*/
-.pie{
+.pie{  
+  height: 100%; 
+  width: 100%;
   background: black;
-  color: white;   
-  margin: -70px;
+  color: white;     
   font-family: 'Roboto', sans-serif;
   
 }
@@ -184,14 +186,18 @@ img{
 }
 #texto-nosotros{
   margin-top: -50px;
+  font-size: 20px;
 }
 
-.pie div p{
-  margin: 2rem 12rem;
-}
 .pie span{
   font-size: 2.5rem;
-  margin-right: 25px;
+  margin-right: 20px;    
+}
+#pie-f{
+  margin-left: 50px;
+}
+#pie-f2{
+  margin-right: 50px;
 }
 
 /*Pagina para ingresar*/
@@ -344,11 +350,17 @@ a{
 }
 
 /*Pestañas de inscripciones*/
+.men-varios{
+  padding-top: 20px;
+  background-color: black;
+}
+
 .menu-in {
   overflow: hidden;    
 }
 
 .menu-in button {
+  color: #FFD101;
   background-color: inherit;
   float: left;
   border: none;
@@ -360,15 +372,97 @@ a{
 }
 
 .menu-in button:hover {
-  background-color: #dddddd;
+  /*background-color: #dddddd;*/
 }
 
 .menu-in button.active {
-  background-color: #FFD101;
+/*  background-color: #FFD101;*/
+  border-bottom: 4px solid #FFD101;
 }
 
 .tabcontent {
   display: none;
   padding: 1rem 1.2rem;  
-  border-top: none;
+  border-top: none;  
+}
+.tabcontent h2{
+  font-size: 1.5rem;
+}
+
+.registro{
+  text-align: center;
+  margin: 0 auto;
+}
+.campo{    
+  margin:20px 5px;
+  float: left;
+  width: 45%;  
+  border-bottom: 1px solid black; 
+  text-align: left;
+}
+input{
+  border: 0;  
+  font-size: .9rem;     
+  color: black;
+  padding-bottom: 8px;
+}
+label{
+  font-size: .8rem;
+  color: gray;
+}
+.texto-form{
+  font-size: 1.2rem;
+}
+.campo2{
+ margin       :20px 10px;
+ float        : left;
+ width        : 35%;
+ height: 130px;
+ text-align   : left; 
+}
+.campo3{
+ margin       :20px 10px;
+ float        : left;
+ width        : 60%; 
+ height: 130px;
+ text-align   : left;
+}
+
+#camisas{
+  border: none;
+}
+
+#tallaCamisa{ 
+ height: 31px;
+ font-size: .9rem;
+border: none;
+}
+.btn-ingresar{
+  background-color: #04BF9D;
+  color:white;
+  font-size: 1rem;
+  padding: 15px 30px;  
+}
+.btn-ingresar:hover{
+  background-color: #FFD101;
+}
+h4{
+  font-size: 1.6rem;
+}
+.pIngresos{
+  font-size: 1rem;
+}
+.sIngresar{
+  font-size: .8rem;
+  color: gray;
+  display: block;
+  margin: 20px 0 0 0 ;
+}
+
+#filtro-eventos{
+  border: none;
+  width: 80%;
+  font-size: 1.3rem;
+  border-bottom: 1px solid black;
+  padding: 8px 0;
 }

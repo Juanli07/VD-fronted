@@ -13,16 +13,11 @@
     
 <body class="">
     <header  class="header-ingresar">
-        <div  class="contenedor contenido-header contenido-centrado nav-float">           
-                <a href="../index.html" class="arriba">
-                    <img id="logo" src="../img/logo.png" alt="Logo vive deporte">
-                </a>     
-                <nav class="menu arriba">                
-                    <a href="../paginas/eventos.html" class="boton">Eventos</a>
-                    <a href="../paginas/servicios.html" class="boton">Servicios</a>
-                    <a href="../paginas/ingresar.html" class="boton-i">Ingresar</a>
-                </nav>                       
-        </div>        
+        <div class="men-varios contenedor contenido-centrado">
+            <a href="../index.html" class="arriba">
+                <img id="logo" src="../img/logo.png" alt="Logo vive deporte">
+            </a>
+        </div>     
     </header>
     <main class="contenedor">
         <div class="menu-in">
@@ -31,14 +26,80 @@
             <button class="pestanas" onclick="abrirPestana(event, 'Ingresos')">Ingresos</button>
         </div>
 
-          <div   id="Inscripcion" class="tabcontent">
-              <h2>Formulario de inscriones</h2>
+          <div   id="Inscripcion" class="tabcontent contenedor-90 ">
+              <h2 class="">Formulario de inscripciones</h2>
+              <form action="" class="" id="registro">
+                <div class="contenedor clearfix" id="datos_usuario">
+                    <div class="campo">
+                        
+                        <input type="text" id="nombre" name="nombre" value="" placeholder="Nombres">
+                    </div>
+                    <div class="campo">
+                        
+                        <input type="text" id="apellido" name="apellido" value="" placeholder="Apellidos">
+                    </div>
+                    <div class="campo">
+                        
+                        <input type="email" id="email" name="email" value="" placeholder="Correo electronico">
+                    </div>
+                    <div class="campo">
+                       
+                        <input type="text" id="email" name="email" value="" placeholder="Número de teléfono">
+                    </div>
+                    <div class="campo2">
+                        <p class="texto-form">Género</p>
+                        <label for=""> <input type="radio" id="genero" name="genero" value=""> Hombre </label>
+                    </br>
+                        <label for=""> <input type="radio" id="genero" name="genero" value=""> Mujer </label>                       
+                    </div>
+                    <div class="campo3">
+                        <p class="texto-form"> Fecha de nacimiento</p>  
+                        <input type="date">                      
+                    </div>
+                    <div class="campo" id="camisas">                        
+                            <select class="" id="tallaCamisa" name="tallaCamisa" required>
+                                <option value="">---Selecciona talla camisa---</option>
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                    </div>
+                    <div class="campo">                        
+                        <input type="text" id="club" name="club" value="" placeholder="Club de corredores">                        
+                    </div>
+                    <div class="" id="error"></div>
+                
+                </div>
+
+              </form>
           </div>
+
           <div   id="Kits"  class="tabcontent">
              <h2>Formulario de kits</h2>
           </div>
-          <div   id="Ingresos"  class="tabcontent">
-              <h2>Formulario de ingresos</h2>
+
+
+          <div   id="Ingresos"  class="tabcontent contenedor-90 ">
+              <h2>Formulario de ingresos</h2>               
+              <div class="contenedor">
+                <button class="btn-ingresar">Descargar ingresos</button>
+                <h4>Ingresos generales del evento</h4>
+                <p class="pIngresos">Incluye ingresos en linea y en punto de venta. Reporte disponible solo para usuarios Master.</p>
+                
+                    <span class="sIngresar">Filtrar registros</span>
+                    <select class="" id="filtro-eventos" name="filtro-eventos" required>                        
+                        <option value="insCompletas">Inscripciones completas</option>
+                        <option value="ptsVenta">Inscripcones en punto venta</option>
+                        <option value="insLinea">Inscripciones en linea</option>                        
+                    </select>
+                    <div class="reporte">
+
+                    </div>
+
+              </div>
+
           </div>
 
     </main>

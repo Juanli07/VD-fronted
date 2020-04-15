@@ -24,9 +24,10 @@
             <button class="pestanas" onclick="abrirPestana(event, 'Inscripcion')">Inscripciones</button>
             <button class="pestanas" onclick="abrirPestana(event, 'Kits')">Kits</button>
             <button class="pestanas" onclick="abrirPestana(event, 'Ingresos')">Ingresos</button>
+            <button class="pestanas" onclick="abrirPestana(event, 'addUser')">Add Usuarios</button>
         </div>
-
-          <div   id="Inscripcion" class="tabcontent contenedor-90 ">
+        
+          <div   id="Inscripcion" class="tabcontent contenedor-90">
               <h2 class="">Formulario de inscripciones</h2>
               <form action="" class="" id="registro">
                 <div class="contenedor clearfix" id="datos_usuario">
@@ -42,8 +43,7 @@
                         
                         <input type="email" id="email" name="email" value="" placeholder="Correo electronico">
                     </div>
-                    <div class="campo">
-                       
+                    <div class="campo">                       
                         <input type="text" id="email" name="email" value="" placeholder="Número de teléfono">
                     </div>
                     <div class="campo2">
@@ -81,23 +81,38 @@
           </div>
 
 
-          <div   id="Ingresos"  class="tabcontent contenedor-90 ">
-              <h2>Formulario de ingresos</h2>               
-              <div class="contenedor">
+          <div   id="ingresos"  class="tabcontent contenedor-90 ">
+            <h2>Formulario de ingresos</h2>               
+            <div class="contenedor">
                 <button class="btn-ingresar">Descargar ingresos</button>
                 <h4>Ingresos generales del evento</h4>
-                <p class="pIngresos">Incluye ingresos en linea y en punto de venta. Reporte disponible solo para usuarios Master.</p>
-                
-                    <span class="sIngresar">Filtrar registros</span>
-                    <select class="" id="filtro-eventos" name="filtro-eventos" required>                        
-                        <option value="insCompletas">Inscripciones completas</option>
-                        <option value="ptsVenta">Inscripcones en punto venta</option>
-                        <option value="insLinea">Inscripciones en linea</option>                        
-                    </select>
-                    <div class="reporte">
+                <p class="pIngresos">Incluye ingresos en linea y en punto de venta. Reporte disponible solo para usuarios Master.</p>                
+                <span class="sIngresar">Filtrar registros</span>
+                <select class="" id="filtro-eventos" name="filtro-eventos" required>                        
+                    <option value="insCompletas">Inscripciones completas</option>
+                    <option value="insMedias">Inscripcones borradas o incompletas</option>
+                    <option value="instotales">Mostrar todas las incripciones</option>                        
+                </select>                    
+                <div class="">
+                <h4>Reportes</h4>
+                <button class="btn-ingresar">Descargar full data</button>
+                </div>
+            </div>
 
-                    </div>
-
+          </div>
+          
+          <div id="addUser" class="tabcontent contenedor-90">
+              <h2>Agregar usuarios autorizados</h2>
+              <div class="campo">
+                <input type="email" id="email" name="email" value="" placeholder="Correo electronico">
+              </div>
+              <div class="campo">
+                <select name="addUser" id="addUser">
+                    <option value="master">Master Organizador</option>
+                    <option value="masterCliente">Master Cliente</option>
+                    <option value="ptventa">Punto de venta</option>
+                    <option value="entregaKits">Entrega de Kits</option>
+                </select>
               </div>
 
           </div>

@@ -162,15 +162,18 @@ img{
   text-decoration: none;
   color: white;   
   background: yellow;   
-  text-align: center;   
+  text-align: center center;   
   text-transform: uppercase;   
   width: 200px;     
   height: 30px;  
   padding: 20px ;
   border-radius: 50px;
   font-size: 18px;  
-  box-shadow: 0px 1px 0px 8px rgba(0,0,0,0.3);
+  box-shadow: 0px 1px 0px 8px rgba(0,0,0,0.3);   
+  margin: 0 auto;
 }
+
+
 
 /*pie de pagina*/
 .pie{  
@@ -250,7 +253,7 @@ img{
     rgba(000, 000, 000, 0.2)
   ),
   url(../img/servicios.jpeg);
-  height: 100vh; 
+  height: 100%; 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;    
@@ -381,31 +384,35 @@ a{
 }
 
 .tabcontent {
-  display: none;
+ display: none;
   padding: 1rem 1.2rem;  
-  border-top: none;  
+  border-top: none;     
+  margin-top: 10px;
+  margin-bottom: 0px;    
+  height: 515px;
+  width: 80%;
+  background-color: white;
 }
 .tabcontent h2{
   font-size: 1.5rem;
 }
 
-.registro{
-  text-align: center;
-  margin: 0 auto;
-}
 .campo{    
-  margin:20px 5px;
   float: left;
-  width: 45%;  
+  margin:20px 5px;
+  width: 40%;  
   border-bottom: 1px solid black; 
   text-align: left;
+  
 }
+
 input{
   border: 0;  
   font-size: .9rem;     
   color: black;
   padding-bottom: 8px;
 }
+
 label{
   font-size: .8rem;
   color: gray;
@@ -428,23 +435,41 @@ label{
  text-align   : left;
 }
 
-#camisas{
+
+#camisas, #modalidad{
   border: none;
 }
 
-#tallaCamisa{ 
+#tallaCamisa, #modalidadCarrera{ 
  height: 31px;
  font-size: .9rem;
 border: none;
 }
 .btn-ingresar{
-  background-color: #04BF9D;
-  color:white;
-  font-size: 1rem;
-  padding: 15px 30px;  
+  color       : #fff !important;
+  font-size   : 20px;
+  font-weight : 500;
+  padding     : 0.5em 1.2em;
+  background  : #318aac;
+  border      : 2px solid;
+  border-color: #318aac;
+  position    : relative;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 5px;
 }
-.btn-ingresar:hover{
-  background-color: #FFD101;
+.btn-ingresar::before{
+  content   :"";
+  position  : absolute;
+  top       : 0px;
+  left      : 0px;
+  width     : 0px;
+  height    : 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 1s ease;
+}
+.btn-ingresar:hover::before{
+  width: 100%;
 }
 h4{
   font-size: 1.6rem;
@@ -465,4 +490,69 @@ h4{
   font-size: 1.3rem;
   border-bottom: 1px solid black;
   padding: 8px 0;
+  margin-bottom: 25px;
+}
+.camposkits{
+  float        : left;
+  margin       :10px 10px;
+  width        : 28%;  
+  text-align   : center;
+  background-color: rgba(252, 252, 252, 0.3);
+  text-align      : center;
+  height          : 200px;
+  transition      : width .5s, height .5s,margin .5s;
+  background-color: #FFD101;
+  padding: 15px ;
+  border-radius: 5%;
+}
+.camposkits:hover{
+  height          : 230px;
+  margin          : 0 auto;
+  background-color: white;
+  cursor          : pointer;
+}
+.reporteskits{
+  font-size: 1.5rem;
+  border-bottom: 1px solid black;
+  display: inline-block;
+  width: 100%;  
+}
+.reportesbtn{
+  text-transform: uppercase;
+  padding: 5px 40px;
+  margin: 15px 0px;
+  background-color: #FFD101;
+  border-radius: 5px;  
+  border: none;
+  cursor: pointer;
+}
+th, td{ 
+
+  padding: 10px;
+  width: 9%;
+  
+}
+th{
+  font-size: 1.3rem;
+  background-color: #318aac;
+  border-radius: 5px;
+  color: white;
+}
+td{
+  font-size: .9rem;
+  border-radius: 5px;  
+}
+#selecUss{
+  border: none;
+}
+#addUser{
+  width: 100%;
+  border: none;  
+}
+#anadir{
+width: 15%;
+text-align: center;
+margin: 30px;
+padding: 10px;
+border-radius: 5px;
 }

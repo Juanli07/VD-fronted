@@ -1,114 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+        <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+
+        <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <title>Iniciar sesión</title>
 </head>
 <body>
     <div class="form-left">
-        <img src="./img/img.svg" alt="Cargando...">
+        <img src="./img/img.svg" alt="Cargando..." class="animated jackInTheBox">
     </div>
     <div class="form-right">
-        <h1>Iniciar sesión</h1>
-        <form action="">
-            <div class="form-group">
-                <label for="InputEmail1" class="bmd-label-floating">Email o ID</label>
-                <input type="email" class="form-control" id="InputEmail1">
-                <span class="bmd-help">Nosotros nunca compartiremos tu email.</span>
+        <div class="content">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="false">Registrarse</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <form action="">
+                        <div class="md-form">
+                            <div style="margin-top: 10px"class="alert alert-danger" id="msg" role="alert" hidden>
+                                Usuario o contraseña inválida
+                            </div>
+                        </div>
+                        <div class="md-form">
+                            <i class="fas fa-envelope prefix"></i>
+                            <input type="email" id="email" class="form-control validate">
+                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                        </div>
+                        <div class="md-form">
+                            <i class="fas fa-lock prefix"></i>
+                            <input type="password" id="password" class="form-control validate">
+                            <label for="password data-error="wrong" data-success="right">Contraseña</label>
+                        </div>
+                        <div class="md-form">
+                            <a href="">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <button type="button" onclick="login()" class="btn btn-outline-amber">Entrar</button>
+                    </form>
+    
+                </div>
+                <div class="tab-pane fade" id="signin" role="tabpanel" aria-labelledby="sign-tab">
+                    <form action="">
+                        <div class="row">
+                            <div class="col">
+                                <!-- nombres -->
+                                <div class="md-form">
+                                    <input type="text" id="firstName" class="form-control">
+                                    <label for="firstName">Nombres</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!-- apellido -->
+                                <div class="md-form">
+                                    <input type="text" id="lastName" class="form-control">
+                                    <label for="lastName">Apellidos</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="md-form">
+                                    <input type="text" id="borndate" class="form-control">
+                                    <label for="borndate">Fecha de nacimiento</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="md-form">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="rbmale" name="group">
+                                            <label class="custom-control-label" for="rbmale">M</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" class="custom-control-input" id="rbfemale" name="group">
+                                            <label class="custom-control-label" for="rbfemale">F</label>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg">
+                                <div class="md-form">
+                                    <input type="email" id="emailsi" class="form-control validate">
+                                    <label for="inputValidationEx" data-error="wrong" data-success="right">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="md-form">
+                                    <input type="password" id="pass" class="form-control validate">
+                                    <label for="pass" data-error="wrong" data-success="right">Contraseña</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="md-form">
+                                    <input type="password" id="pass2" class="form-control validate">
+                                    <label for="pass2" data-error="wrong" data-success="right">Confirmar Contraseña</label>
+                                </div>
+                            </div>
+                        </div>        
+                        <button type="button" class="btn btn-outline-amber">Resgistrar</button>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="InputPassword" class="bmd-label-floating">Contraseña</label>
-                <input type="password" class="form-control" id="InputPassword">
-            </div>
-            <input type="submit" class="btn btn-sample" value="Entrar">
-        </form>
+        </div>
     </div>
     
 </body>
-<style>
-    body{
-        overflow-x:hidden;
-        overflow-y:hidden;
-        height: 100%;
-        float: auto;
-    }
-    .form-left {
-        float: left;
-        width: 40%;
-        height: 680px;
-        background: #FED00B;
-        text-align: center;
-        overflow: hidden;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .form-left img {
-        width: 80%;
-        height: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 30%;
-    }
-    .form-right {
-        padding: 13%;
-        float: right;
-        width: 60%;
-        height: 100%;
-    }
-    .btn-sample { 
-        color: #FFFFFF; 
-        background-color: #FED00B; 
-        border-color: #FED00B; 
-    }
-    .form-group {
-        color: red;
-    }
-    
- 
-    .btn-sample:hover, 
-    .btn-sample:focus, 
-    .btn-sample:active, 
-    .btn-sample.active, 
-    .open .dropdown-toggle.btn-sample { 
-    color: #FFFFFF; 
-    background-color: #7A3B24; 
-    border-color: #FED00B; 
-    } 
-    
-    .btn-sample:active, 
-    .btn-sample.active, 
-    .open .dropdown-toggle.btn-sample { 
-    background-image: none; 
-    } 
-    
-    .btn-sample.disabled, 
-    .btn-sample[disabled], 
-    fieldset[disabled] .btn-sample, 
-    .btn-sample.disabled:hover, 
-    .btn-sample[disabled]:hover, 
-    fieldset[disabled] .btn-sample:hover, 
-    .btn-sample.disabled:focus, 
-    .btn-sample[disabled]:focus, 
-    fieldset[disabled] .btn-sample:focus, 
-    .btn-sample.disabled:active, 
-    .btn-sample[disabled]:active, 
-    fieldset[disabled] .btn-sample:active, 
-    .btn-sample.disabled.active, 
-    .btn-sample[disabled].active, 
-    fieldset[disabled] .btn-sample.active { 
-    background-color: #FED00B; 
-    border-color: #FED00B; 
-    } 
-    
-    .btn-sample .badge { 
-    color: #FED00B; 
-    background-color: #FFFFFF; 
-    }
-</style>
+<script src="./js/login.js"></script>
 </html>

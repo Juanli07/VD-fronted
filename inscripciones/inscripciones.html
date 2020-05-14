@@ -34,7 +34,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+    <a class="navbar-brand" href="/index.html"><img src="./img/logo.png" alt=""></a>
   
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -83,7 +83,7 @@
     <!-- Collapsible content -->
   </nav>
 
-  <div class="col-xl-12 col-lg-12">
+  <div class="col-xl-10 col-lg-10 mx-auto">
     <div class="card shadown lg-6">
       <div class="row">
         <div class="form-group col-sm-4">
@@ -113,11 +113,11 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <div class="md-form input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text md-addon">Género</span>
+          <div class=" md-form  d-flex justify-content-lg-between ">
+            <div class="">
+              <span class="input-group-text md-addon">Género</span>              
             </div>
-            <div class="input-group-mb-append" id="MaterialButton-addon4">
+            <div class="" id="MaterialButton-addon4">
               <div class="custom-control custom-radio custom-control-inline">
                   <input type="radio" class="custom-control-input" id="rbmale" name="group">
                   <label class="custom-control-label" for="rbmale">M</label>
@@ -137,7 +137,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="md-form">
             <select class="browser-default custom-select form-control">
               <option selected>Seleccione una talla</option>
@@ -147,7 +147,7 @@
             </select>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="md-form">
             <input type="text" id="club" class="form-control">
             <label for="club">Club</label>
@@ -172,5 +172,10 @@
       margin-top: 8%;
       padding:10px; 
     }
+    @media (max-width: 1000px) {
+  .cambio {
+    display: inline-block;
+  }
+}
 </style>
 </html>

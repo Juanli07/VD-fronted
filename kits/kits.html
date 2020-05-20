@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kits</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ingresos
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Kits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ingresos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+            </ul>
+            <!-- Links -->
+
+            <form class="form-inline">
+                <div class="btn-group">
+                    <button class="btn btn-outline-warning btn-rounded btn-sm dropdown-toggle" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="./img/xd.png" alt="">
+                        User name
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Perfil</a>
+                        <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Ajustes</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- Collapsible content -->
+    </nav>
+    <div class="col-xl-12 col-lg-12">
+        <div class="card shadown lg-6">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="md-form">
+                        <select class="browser-default custom-select form-control">
+                            <option selected>Seleccione una carrera</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="md-form">
+                        <select class="browser-default custom-select form-control">
+                            <option selected>Seleccione un Participante</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="md-form">
+                        <select class="browser-default custom-select form-control">
+                            <option selected>Seleccione un articulo</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-warning ml-auto" onclick="add()">Añadir <i class="fas fa-plus-circle"></i></button>
+            <h2 class="mb-3">Articulos seleccionados</h2>
+            <div class="table-responsive">
+                <table id="articles" class="table">
+                    <thead>
+                        <tr>
+                            <th>Articulo</th>
+                            <th>Talla</th>
+                            <th>Cantidad</th>
+                            <th>Evento</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td> 
+                            <div class="md-form">
+                                name article
+                            </div>
+                        </td>
+                        <td>
+                            <div class="md-form">
+                                <input type="number" id="size" min="24" value="24" class="form-control">
+                                <label for="size">Talla</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="md-form">
+                                <input type="number" id="amount" min="1" value="1" class="form-control">
+                                <label for="amount">Cantidad</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="md-form">
+                                Carrera xd
+                            </div>
+                        </td>
+                        <td>
+                            <div class="md-form">
+                                <a href="" id="del"><i class="fas fa-minus-circle"></i></a>
+                            </div>
+                        </td>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-warning ml-auto">Enviar</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/index.js"></script>
+</html>

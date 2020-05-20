@@ -71,8 +71,7 @@ img{
   background-size : cover;
   background-position: center center;
   background-attachment: fixed;
-  filter: brightness(.6);
-  
+  filter: brightness(.6);  
 }
 .fondo-p{
   position: relative;

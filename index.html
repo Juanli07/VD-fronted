@@ -1,58 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="full-height">
 <head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vive Deportes</title>    
-    <link href="https://fonts.googleapis.com/css?family=Patua+One|Roboto&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <script src="js/index.js"></script>
+    
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vive Deporte mx</title>
 </head>
-<body>
-<header class="site-header">
-        <div class="fondo-p parallax">
-            <div class="contenedor contenido-header contenido-centrado nav-float ">
-                <a href="index.html" class="arriba">
-                    <img id="logo" src="img/logo.png" alt="Logo vive deporte">
-                </a>
-                <nav class="menu arriba">
-                    <a href="./paginas/eventos.html" class="boton">Eventos</a>
-                    <a href="./paginas/servicios.html" class="boton">Servicios</a>
-                    <a href="./paginas/Ingresar.html" class="boton-i">Ingresar</a>
-                </nav>
-            </div>            
+<body class="" >
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar homenavbar   ">
+        <div class="container">
+        <a class="navbar-brand" href="./index.html"><img src="./img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ml-auto smooth-scroll">                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Eventos/eventos.html" data-offset="90">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Login_Sign-In/login.html" data-offset="90">Ingresar</a>
+                    </li>                   
+                </ul>                
+            </div>
         </div>
-</header>
-
-<main class="principal contenedor contenido-centrado">
-    <div class="contenedor-90">
-        <h1>¿Qué es <span> Vive deporte </span>?</h1>        
-        <p>Lorem ipsum dolor, sit amet consectetur repudiandae vel nostrum, ipsum dolor, sit amet consectetur repudiandae vel nostrum,  ipsum dolor, sit amet consectetur repudiandae vel nostrum, corporis autem? Odit, dolorum perferendis accusamus facilis eius velit est.</p>
-        <a href="/paginas/eventos.html" class="boton-solo">Proximos eventos</a>
-    </div>      
-</main>
-<footer class="pie centrar-texto ">
-    <div class="nosotros contenedor contenido-centrado">
-        <h2>Nosotros</h2>
-        <p id="texto-nosotros">Lorem ipsum  Lorem, ipsum dolor sit amet consectetur <br> 
-            adipisicing elit. Dignissimos voluptate at odit illo laudantium, quasi assumenda quam  orrupti,<br> 
-            rchitecto quibusdam perspiciatis inventore sint ex quas ut atque amet?dolor sadipisicing elit. <br>              
-    </div>
-    <div class="contenedor contenido-header">        
-           <p id="pie-f">2020 vive deporte</p>
-           <p id="pie-f2"> 
-                <span class="fab fa-whatsapp"></span>
-                <span class="fab fa-facebook"></span>
-                <span class="fab fa-youtube"></span>
-                <span class="fab fa-twitter"></span>
-                <span class="fab fa-instagram"></span>          
-            </p>           
-    </div>     
-</footer>
-
+    </nav>
+    <!-- Navbar -->
+    <!-- Full Page Intro -->
+    <div class="view">       
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-gradient align-items-center">
+            <!-- Content -->
+            <div class="container px-md-3 px-sm-0">
+                <!--Grid row-->
+                <div class="row wow fadeIn">
+                    <!--Grid column-->
+                    <div class="col-md-12 mb-4 white-text text-center wow fadeIn homemargen">
+                        <h3 class="display-1 font-weight-bold white-text mb-0 pt-md-5 pt-5 font">Vive Deporte</h3>                        
+                        <h4 class="subtext-header bold mt-2 mb-4">La importancia no es correr, sino divertirse en el camino</h4>
+                        <a href="./Eventos/eventos.html" class="btn  btn-warning homeboton btn-rounded btn-lg ">
+                            <i class="">proximos eventos</i> 
+                        </a>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+        <!-- Footer -->
+        <footer class="page-footer font-small pt-4 fixed-bottom homefooter">
         
+            <!-- Footer Text -->
+            <div class="container-fluid text-center text-md-left py-4">
+        
+                <!-- Grid row -->
+                <div class="row">
+        
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3 text-left marginfooter ">
+        
+                        <!-- Content -->
+                        <h5 class="text-uppercase font-weight-bold">Nosotros</h5>
+                        <p>Comienza con la muerte de Gol D. Roger, un hombre conocido como Rey de los Piratas.Roger hace mención
+                            de su gran tesoro legendario, el «One Piece» y que
+                            puede ser tomado por quien lo encuentre. Años después de la muerte de Roger, el One Piece sigue sin
+                            ser encontrado. Monkey D. Luffy,
+                            comienza su aventura desde su hogar en el mar East Blue para encontrar el One Piece y
+                            autoproclamarse a él mismo como el nuevo Rey de los Piratas.
+                        </p>
+        
+                    </div>
+                    <!-- Grid column -->
+        
+                    <hr class="clearfix w-100 d-md-none pb-3">
+        
+                    <!-- Grid column -->
+                    <div class="col-md-4  mb-md-0 mb-3 text-left marginfooter">
+        
+                        <!-- Content -->
+                        <h5 class="text-uppercase font-weight-bold">Contacto</h5>
+                        <p>
+                            Dirección: C.20x13 y 18 N°23
+                            <br>
+                            Tel.: 9991-123-234
+                            <br>
+                            Email: www.vivedeportemx.com
+                            <br>
+                            Representante: Andrés Ortiz Puc
+                        </p>
+        
+                    </div>
+                    <!-- Grid column -->
+        
+                </div>
+                <!-- Grid row -->
+        
+            </div>
+            <!-- Footer Text -->
+        
+            <!-- Copyright -->
+        
+            <div class="footer-copyright ">
+        
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+        
+                    <!-- Grid column -->
+                    <div class="text-center marginlat ">© 2020 Copyright:
+                        <a href="https://mdbootstrap.com/"> Vive deporte mx. <span>Todos los derechos reservados</span></a>
+                    </div>
+                    <!-- Grid column -->
+        
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+        
+                        <!-- Facebook -->
+                        <a class="fb-ic">
+                            <i class="fab fa-facebook-f white-text mr-4"> </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <!-- Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                        </a>
+                        <!--Linkedin -->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text"> </i>
+                        </a>
+        
+                    </div>
+                    <!-- Grid column -->
+        
+                </div>
+                <!-- Grid row-->
+        
+            </div>
+        
+        
+            <!-- Copyright -->
+        
+        </footer>
+        <!-- Footer -->
+    </div>
+    <!-- Full Page Intro -->
+    
+    </header>
+    <!-- Main navigation -->
+    <!--Main Layout-->
+    
+    <!--Main Layout-->
+
+    
 </body>
+<style>    
+   
+    .btn-group img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar-brand img {
+        width: 55px;
+    }        
+    ul{
+        margin-right: 30px !important;
+    }   
+    
+    .homemargen{
+        margin-top: 5%;
+    }
+    .marginlat{
+        margin: 0 4% !important;
+    }
+    .homeboton{
+        border-radius: 30px;
+        width: 350px;
+        font-size: 1.6rem !important;
+        font-weight:  bold!important;
+    }
+
+    .homefooter{        
+           background-color: #010A26; /* o background-color:#000000; */	
+            opacity: 0.9;
+    }  
+    
+    .marginfooter{
+        margin: 0 4% !important;
+    }
+    .homenavbar{
+        border-bottom: 3px solid yellow;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+.view{
+   background-image: url(../img/homepage.jpg) !important; 
+   background-position-x: 0;
+   background-position-y: -233px;
+   background-repeat : no-repeat;
+  background-size : cover;
+  background-position: center center;
+  background-attachment: fixed;
+  
+}
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  border-bottom: 3px solid yellow;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 740px) {
+  .navbar:not(.top-nav-collapse ) {
+    background: transparent !important;
+}
+  }
+
+
+</style>
 </html>

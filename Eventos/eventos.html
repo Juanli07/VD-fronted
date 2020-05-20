@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -9,19 +10,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
-    
+
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
@@ -30,431 +33,347 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proximos eventos</title>
 </head>
+
 <body>
-   
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar homenavbar">
-            <div class="container">
-                <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav ml-auto smooth-scroll">
-                    
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Login_Sign-In/login.html" data-offset="90">Ingresar</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar homenavbar">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><img src="../img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ml-auto smooth-scroll">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Login_Sign-In/login.html" data-offset="90">Ingresar</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
- 
-    <div class="container my-5">
-    
-        <!-- Section -->
-        <section>
-                    
-            <!-- Modal -->
-            <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body p-0">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-    
-                            <!-- Grid row -->
-                            <div class="row">
-    
-                                <!-- Grid column -->
-                                <div class="col-md-6 py-5 pl-5">
-    
-                                    <h5 class="font-weight-normal mb-3">Ejemplo carrea</h5>
-    
-                                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolore, commodi et quasi harum, sit obcaecati consequuntur repellat
-                                         perferendis sunt minus reiciendis ab! Ipsum delectus corrupti voluptatibus quis a porro!</p>
-    
-                                    <ul class="list-unstyled font-small mt-5">
-                                        <li>
-                                            <p class="text-uppercase mb-2"><strong>Client</strong></p>
-                                            <p class="text-muted mb-4">Envato Inc.</p>
-                                        </li>
-    
-                                        <li>
-                                            <p class="text-uppercase mb-2"><strong>Date</strong></p>
-                                            <p class="text-muted mb-4">June 27, 2019</p>
-                                        </li>
-    
-                                        <li>
-                                            <p class="text-uppercase mb-2"><strong>Skills</strong></p>
-                                            <p class="text-muted mb-4">Design, HTML, CSS, Javascript</p>
-                                        </li>   
-                                        <li>
-                                            <div class="d-flex justify-content-end">
-                                                <button type="button" class="btn  btn-sm btn-danger rendondo">Inscripción</button>
-                                            </div>
-                                        </li> 
-                                    </ul>
-    
-                                </div>
-                                <!-- Grid column -->
-    
-                                <!-- Grid column -->
-                                <div class="col-md-6">
-    
-                                    <div class="view rounded-right">
-                                        <img class="img-fluid cartelfull" src="../Ejemplo de carreras/índice.jpeg"
-                                            alt="img carrera 1">
-                                    </div>
-    
-                                </div>
-                                <!-- Grid column -->
-    
-                            </div>
-                            <!-- Grid row -->
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="basicExampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body p-0">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-            
-                            <!-- Grid row -->
-                            <div class="row">
-            
-                                <!-- Grid column -->
-                                <div class="col-md-6 py-5 pl-5">
-            
-                                    <h5 class="font-weight-normal mb-3">Ejemplo carrea 2</h5>
-            
-                                    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem suscipit quo asperiores vero inventore 
-                                        distinctio nesciunt sunt quia placeat aut dolores accusantium velit quasi ratione, esse sequi tempore, eum cupiditate?</p>
-            
-                                    <ul class="list-unstyled font-small mt-5">
-                                        <li>
-                                            <p class="text-uppercase mb-2"><strong>Client</strong></p>
-                                            <p class="text-muted mb-4">Envato Inc.</p>
-                                        </li>
-            
-                                        <li>
-                                            <p class="text-uppercase mb-2"><strong>Date</strong></p>
-                                            <p class="text-muted mb-4">June 27, 2019</p>
-                                        </li>
-            
-                                        <li>
-                                            <p class="text-uppercase mb-2"><strong>Skills</strong></p>
-                                            <p class="text-muted mb-4">Design, HTML, CSS, Javascript</p>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-end">
-                                                <button type="button" class="btn  btn-sm btn-danger rendondo">Inscripción</button>
-                                            </div>
-                                        </li>
-                                    </ul>
-            
-                                </div>
-                                <!-- Grid column -->
-            
-                                <!-- Grid column -->
-                                <div class="col-md-6">
-            
-                                    <div class="view rounded-right">
-                                        <img class="img-fluid cartelfull" src="../Ejemplo de carreras/índice2.jpeg"
-                                            alt="img carrera 1">
-                                    </div>
-            
-                                </div>
-                                <!-- Grid column -->
-            
-                            </div>
-                            <!-- Grid row -->
-            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="basicExampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-body p-0">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-            
-                            <!-- Grid row -->
-                            <div class="row">
-            
-                                <!-- Grid column -->
-                                <div class="col-md-6 py-5 pl-5">
-            
-                                    <h5 class="font-weight-normal mb-3">Ejemplo carrea</h5>
-            
-                                    <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae illum atque adipisci soluta. Similique blanditiis
-                                         molestiae repudiandae, aliquid alias, quos suscipit, odit esse ex quasi ducimus ipsam? Labore, esse quae.</p>
-            
-                                    <ul class="list-unstyled font-small mt-5">
-                                        <li>
-                                            <p class="text-uppercase mb-2"><strong>Client</strong></p>
-                                            <p class="text-muted mb-4">Envato Inc.</p>
-                                        </li>
-            
-                                        <li>
-                                            <p class="text-uppercase mb-2"><strong>Date</strong></p>
-                                            <p class="text-muted mb-4">June 27, 2019</p>
-                                        </li>
-            
-                                        <li>
-                                            <p class="text-uppercase mb-2"><strong>Skills</strong></p>
-                                            <p class="text-muted mb-4">Design, HTML, CSS, Javascript</p>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex justify-content-end">
-                                                <button type="button" class="btn  btn-sm btn-danger rendondo">Inscripción</button>
-                                            </div>
-                                        </li>
-                                    </ul>
-            
-                                </div>
-                                <!-- Grid column -->
-            
-                                <!-- Grid column -->
-                                <div class="col-md-6">
-            
-                                    <div class="view rounded-right">
-                                        <img class="img-fluid cartelfull" src="../Ejemplo de carreras/índice4.png"
-                                            alt="img carrera 1">
-                                    </div>
-            
-                                </div>
-                                <!-- Grid column -->
-            
-                            </div>
-                            <!-- Grid row -->
-            
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-            <br>         
-            <h3 class="font-weight-bold text-center dark-grey-text pb-2">Eventos</h3>
-            <hr class=" my-4">            
-    
-            <!--First row-->
-            <div class="row">
-    
-                <!--First column-->                
-                <!--First column-->
-    
-            </div>
-            <!--First row-->
-    
-            <!--Tab panels-->
-            <div class="tab-content mb-5">
-    
-                <!--Panel 1-->
-                <div class="tab-pane fade show in active" id="panel31" role="tabpanel">
-    
-                    <!-- Grid row -->
-                    <div class="row">
-    
-                        <!-- Grid column -->
-                        <div class="col-md-12 col-lg-4">
-    
-                            <!-- Card -->
-                        <a class="card hoverable mb-4 " data-toggle="modal" data-target="#basicExampleModal">
-    
-                                <!-- Card image -->
-                                <img class="card-img-top mx-auto " src="../Ejemplo de carreras/índice.jpeg"
-                                    alt="ejemplo carrera">
-    
-                                <!-- Card content -->
-                                <div class="card-body ">
-    
-                                    <h5 class="my-3">Carrera de los emprendedores</h5>
-                                    <p class="card-text text-uppercase mb-3">3 Noviembre</p>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn  btn-sm btn-danger rendondo">Leer más</button>
-                                    </div>
-    
-                                </div>
-    
-                            </a>
-                            <!-- Card -->
-    
-                            <!-- Card -->
-                            <a class="card hoverable mb-4 " data-toggle="modal" data-target="#basicExampleModal2">
-    
-                                <!-- Card image -->
-                                <img class="card-img-top mx-auto" src="../Ejemplo de carreras/índice4.png"
-                                    alt="carrera 4">
-    
-                                <!-- Card content -->
-                                <div class="card-body">
-    
-                                    <h5 class="my-3">Carrera </h5>
-                                    <p class="card-text text-uppercase mb-3">xd</p>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn  btn-sm btn-danger rendondo">Leer más</button>
-                                    </div>
-    
-                                </div>
-    
-                            </a>
-                            <!-- Card -->
-    
-                        </div>
-                        <!-- Grid column -->
-    
-                        <!-- Grid column -->
-                        <div class="col-md-6 col-lg-4">
-    
-                            <!-- Card -->
-                            <a class="card hoverable mb-4 mx-auto" data-toggle="modal" data-target="#basicExampleModal3">
-    
-                                <!-- Card image -->
-                                <img class="card-img-top mx-auto" src="../Ejemplo de carreras/índice2.jpeg"
-                                    alt=carrera 2">
-    
-                                <!-- Card content -->
-                                <div class="card-body">
-    
-                                    <h5 class="my-3">Carrera pedreste</h5>
-                                    <p class="card-text text-uppercase mb-3">2 septiembre</p>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn  btn-sm btn-danger rendondo">Leer más</button>
-                                    </div>
-    
-                                </div>
-    
-                            </a>
-                            <!-- Card -->
-    
-                            <!-- Card -->
-                            <a class="card hoverable mb-4 mx-auto" data-toggle="modal" data-target="#basicExampleModal">
-    
-                                <!-- Card image -->
-                                <img class="card-img-top mx-auto" src="../Ejemplo de carreras/images5.jpeg"
-                                    alt="carrera 5">
-    
-                                <!-- Card content -->
-                                <div class="card-body">
-    
-                                    <h5 class="my-3">Carrera 5</h5>
-                                    <p class="card-text text-uppercase mb-3">xd2</p>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn  btn-sm btn-danger rendondo">Leer más</button>
-                                    </div>
-    
-                                </div>
-    
-                            </a>
-                            <!-- Card -->
-    
-                        </div>
-                        <!-- Grid column -->
-    
-                        <!-- Grid column -->
-                        <div class="col-md-6 col-lg-4">
-    
-                            <!-- Card -->
-                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal2">
-    
-                                <!-- Card image -->
-                                <img class="card-img-top mx-auto" src="../Ejemplo de carreras/índice3.jpeg"
-                                    alt="carrera 3">
-    
-                                <!-- Card content -->
-                                <div class="card-body">
-    
-                                    <h5 class="my-3">Carrera atletica </h5>
-                                    <p class="card-text text-uppercase mb-3">14 de octubre </p>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn  btn-sm btn-danger rendondo">Leer más</button>    
-                                    </div>
-                                                                    
-                                </div>
-    
-                            </a>
-                            <!-- Card -->
-    
-                            <!-- Card -->
-                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal3">
-    
-                                <!-- Card image -->
-                                <img class="card-img-top mx-auto" src="../Ejemplo de carreras/índice2.jpeg"
-                                    alt="Cdoblecarrera 2">
-    
-                                <!-- Card content -->
-                                <div class="card-body">
-    
-                                    <h5 class="my-3">Carrera rep</h5>
-                                    <p class="card-text text-uppercase mb-3">2</p>
-                                    <div class="d-flex justify-content-end">
-                                        <button type="button" class="btn  btn-sm btn-danger rendondo">Leer más</button>
-                                    </div>
-    
-                                </div>
-    
-                            </a>
-                            <!-- Card -->
-    
-                        </div>
-                        <!-- Grid column -->
-    
-                    </div>
-                    <!-- Grid row -->
-    
-                </div>
-                <!--Panel 1-->
-    
-                <!--Panel 2-->
-                
-                <!--Panel 2-->
-    
-                <!--Panel 3-->
-                
-                <!--Panel 3-->
-    
-            </div>
-            <!--Tab panels-->
-    
-        </section>
-        <!-- Section -->
-    
-    </div>
-    <!-- Copyright -->
-    
-    <div class="footer-copyright ">
-    
-        <!-- Grid row-->
-        <div class="row py-4 d-flex align-items-center">
-    
-            <!-- Grid column -->
-            <div class="text-center marginlat  ">© 2020 Copyright:
-                <a href="#"> Vive deporte mx. <span>Todos los derechos reservados</span></a>
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            
-            <!-- Grid column -->
-    
         </div>
-        <!-- Grid row-->
-    
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="col-xl-11 col-lg-6 mx-auto">
+
+        <h3 class="font-weight-bold text-center dark-grey-text pb-2">Eventos</h3>
+        <hr class=" my-4">
+        <div class="container my-5  ">
+            <section>
+                <div class="row">
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-xl-3 mb-4">
+                        <div class="card hoverable mb-4">
+
+                            <!-- Card content -->
+                            <div class="card-body d-flex flex-row">
+
+                                <!-- Avatar -->
+                               
+
+                                <!-- Content -->
+                                <div>
+
+                                    <!-- Title -->
+                                    <h4 class="card-title font-weight-bold mb-2">Nombre Carrera</h4>
+                                    <!-- Subtitle -->
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top rounded-0"
+                                    src="./img/candelaria.jpg"
+                                    alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+
+                                <div class="collapse-content">
+
+                                    <!-- Text -->
+                                    <p class="card-text collapse" id="collapseContent1">Recently, we added several exotic
+                                        new dishes to our
+                                        restaurant menu. They come from countries such as Mexico, Argentina, and Spain.
+                                        Come to us, have some
+                                        delicious wine and enjoy our juicy meals from around the world.</p>
+                                    <p class="card-text collapse" id="collapseContent1">Contacto: 999115643826</p>
+                                    <p class="card-text collapse" id="collapseContent1">Lugar: xxxx, Mérida, Yucatán,
+                                        México</p>
+                                    <p class="card-text collapse" id="collapseContent1">Patrocinador: Asian-Boy Compani
+                                    </p>
+                                    <!-- Button -->
+
+                                    <button type="button"
+                                        class="btn  btn-sm btn-danger rendondo float-right p-1 my-1 mr-0 mml-1 collapsed"
+                                        data-toggle="collapse" href="#collapseContent1" aria-expanded="false"
+                                        aria-controls="collapseContent">Leer más</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Card -->
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-xl-3 mb-4">
+                        <div class="card hoverable mb-4">
+                    
+                            <!-- Card content -->
+                            <div class="card-body d-flex flex-row">
+                    
+                                <!-- Avatar -->
+                                
+                    
+                                <!-- Content -->
+                                <div>
+                    
+                                    <!-- Title -->
+                                    <h4 class="card-title font-weight-bold mb-2">Nombre Carrera</h4>
+                                    <!-- Subtitle -->
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+                    
+                                </div>
+                    
+                            </div>
+                    
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top rounded-0" src="./img/maraton.jpg"
+                                    alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                    
+                            <!-- Card content -->
+                            <div class="card-body">
+                    
+                                <div class="collapse-content">
+                    
+                                    <!-- Text -->
+                                    <p class="card-text collapse" id="collapseContent2">Recently, we added several exotic
+                                        new dishes to our
+                                        restaurant menu. They come from countries such as Mexico, Argentina, and Spain.
+                                        Come to us, have some
+                                        delicious wine and enjoy our juicy meals from around the world.</p>
+                                    <p class="card-text collapse" id="collapseContent2">Contacto: 999115643826</p>
+                                    <p class="card-text collapse" id="collapseContent2">Lugar: xxxx, Mérida, Yucatán,
+                                        México</p>
+                                    <p class="card-text collapse" id="collapseContent2">Patrocinador: Asian-Boy Compani
+                                    </p>
+                                    <!-- Button -->
+                    
+                                    <button type="button" class="btn  btn-sm btn-danger rendondo float-right p-1 my-1 mr-0 mml-1 collapsed"
+                                        data-toggle="collapse" href="#collapseContent2" aria-expanded="false"
+                                        aria-controls="collapseContent">Leer más</button>
+                    
+                                </div>
+                    
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <!-- Card -->
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-xl-3 mb-4">
+                        <div class="card hoverable mb-4">
+                    
+                            <!-- Card content -->
+                            <div class="card-body d-flex flex-row">
+                    
+                                <!-- Avatar -->
+                                
+                                <!-- Content -->
+                                <div>
+                    
+                                    <!-- Title -->
+                                    <h4 class="card-title font-weight-bold mb-2">Nombre Carrera</h4>
+                                    <!-- Subtitle -->
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+                    
+                                </div>
+                    
+                            </div>
+                    
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top rounded-0" src="./img/Rutadelfin.jpg"
+                                    alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                    
+                            <!-- Card content -->
+                            <div class="card-body">
+                    
+                                <div class="collapse-content">
+                    
+                                    <!-- Text -->
+                                    <p class="card-text collapse" id="collapseContent3">Recently, we added several exotic
+                                        new dishes to our
+                                        restaurant menu. They come from countries such as Mexico, Argentina, and Spain.
+                                        Come to us, have some
+                                        delicious wine and enjoy our juicy meals from around the world.</p>
+                                    <p class="card-text collapse" id="collapseContent3">Contacto: 999115643826</p>
+                                    <p class="card-text collapse" id="collapseContent3">Lugar: xxxx, Mérida, Yucatán,
+                                        México</p>
+                                    <p class="card-text collapse" id="collapseContent3">Patrocinador: Asian-Boy Compani
+                                    </p>
+                                    <!-- Button -->
+                    
+                                    <button type="button" class="btn  btn-sm btn-danger rendondo float-right p-1 my-1 mr-0 mml-1 collapsed"
+                                        data-toggle="collapse" href="#collapseContent3" aria-expanded="false"
+                                        aria-controls="collapseContent">Leer más</button>
+                    
+                                </div>
+                    
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <!-- Card -->
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-xl-3 mb-4">
+                        <div class="card hoverable mb-4">
+                    
+                            <!-- Card content -->
+                            <div class="card-body d-flex flex-row">
+                    
+                                <!-- Avatar -->
+                               
+                                <!-- Content -->
+                                <div>
+                    
+                                    <!-- Title -->
+                                    <h4 class="card-title font-weight-bold mb-2">Nombre Carrera</h4>
+                                    <!-- Subtitle -->
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+                    
+                                </div>
+                    
+                            </div>
+                    
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top rounded-0" src="./img/Pri.JPG"
+                                    alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                    
+                            <!-- Card content -->
+                            <div class="card-body">
+                    
+                                <div class="collapse-content">
+                    
+                                    <!-- Text -->
+                                    <p class="card-text collapse" id="collapseContent">Recently, we added several exotic
+                                        new dishes to our
+                                        restaurant menu. They come from countries such as Mexico, Argentina, and Spain.
+                                        Come to us, have some
+                                        delicious wine and enjoy our juicy meals from around the world.</p>
+                                    <p class="card-text collapse" id="collapseContent">Contacto: 999115643826</p>
+                                    <p class="card-text collapse" id="collapseContent">Lugar: xxxx, Mérida, Yucatán,
+                                        México</p>
+                                    <p class="card-text collapse" id="collapseContent">Patrocinador: Asian-Boy Compani
+                                    </p>
+                                    <!-- Button -->
+                    
+                                    <button type="button" class="btn  btn-sm btn-danger rendondo float-right p-1 my-1 mr-0 mml-1 collapsed"
+                                        data-toggle="collapse" href="#collapseContent" aria-expanded="false"
+                                        aria-controls="collapseContent">Leer más</button>
+                    
+                                </div>
+                    
+                            </div>
+                    
+                        </div>
+                    </div>
+                    <!-- Card -->
+
+                </div>
+            </section>
+        </div>
+
+
+
     </div>
-    
+
+
+
 </body>
+<style>
+    .btn-group img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar-brand img {
+        width: 55px;
+    }
+
+    ul {
+        margin-right: 30px !important;
+    }
+
+    .homemargen {
+        margin-top: 5%;
+    }
+
+    .marginlat {
+        margin: 0 4% !important;
+    }
+
+    .homeboton {
+        border-radius: 30px;
+        width: 350px;
+        font-size: 1.6rem !important;
+        font-weight: bold !important;
+    }
+
+    .homefooter {
+        background-color: #010A26;
+        /* o background-color:#000000; */
+        opacity: 0.9;
+    }
+
+    .marginfooter {
+        margin: 0 4% !important;
+    }
+
+    .homenavbar {
+        border-bottom: 3px solid yellow;
+        margin-left: 80px;
+        margin-right: 80px;
+        background-color: #010A26 !important;
+    }
+
+
+    .top-nav-collapse {
+        border-bottom: 3px solid yellow;
+    }
+
+    .navbar:not(.top-nav-collapse) {
+        background-color: #010A26 !important;
+    }
+
+    @media (max-width: 740px) {
+        .navbar:not(.top-nav-collapse) {
+            background-color: #010A26 !important;
+        }
+    }
+</style>
 
 </html>

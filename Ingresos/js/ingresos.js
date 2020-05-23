@@ -1,4 +1,6 @@
 $(document).ready( function(){
+    checkAccess()
+    setName()
     $('#tablexd').DataTable();
     $('.dataTable_length').addClass('bs-select')
 })

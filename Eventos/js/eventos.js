@@ -10,3 +10,8 @@ $(function () {
         }, 300);
     });
 });
+
+$(document).ready( () => {
+    checkAccess()
+    setName()
+})

@@ -11,3 +11,7 @@ function add(){
     row = `<tr><td><div class="md-form">Playera</div></td><td>${selectSize}</td><td>${sleectAmount}</td><td><div class="md-form">Carrera 2</div></td><td>${del}</td></tr>`
     $('.table tbody').append(row)
 }
+$(document).ready( () => {
+    checkAccess()
+    setName()
+})

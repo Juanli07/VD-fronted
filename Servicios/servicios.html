@@ -24,6 +24,7 @@
     
     <!-- axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/index.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Servicios</title>
@@ -57,13 +58,13 @@
                         <button class="btn btn-outline-warning btn-rounded btn-sm dropdown-toggle" type="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img src="/img/xd.png" alt="">
-                            User name
+                            <i class="name">User name</i>
                         </button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Perfil</a>
                             <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Ajustes</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="../Login_Sign-In/login.html">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                            <a class="dropdown-item" href="#" onclick="logout()">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                         </div>
                     </div>
                 </form>
@@ -192,6 +193,7 @@
     
    
 </body>
+<script src="js/servicios.js"></script>
 <style>
     .footer-servicios{
        margin: 0 4%;
@@ -261,7 +263,8 @@ header,
    background-position-y: -105px;
    background-repeat : no-repeat;
     background-size : cover;    
-    background-attachment: fixed;  
+    background-attachment: fixed;
+    background-position: center bottom;  
     
 }
 @media (max-width: 790px) {

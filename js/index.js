@@ -1,4 +1,4 @@
-const path = "http://localhost:3000/vd"
+const path = "https://vd-0.herokuapp.com/vd"
 function logout(){
     localStorage.clear();
     location.href='/index.html'

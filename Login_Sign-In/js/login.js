@@ -25,6 +25,6 @@ function showMsg(msg){
 
 $(document).ready( () => {
     if(localStorage.getItem('token')){
-        location.href="../Servicios/servicios.html"
+        location.href ="#"
     }
 })

@@ -70,13 +70,13 @@
             <button class="btn btn-outline-warning btn-rounded btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
                 <img src="../img/xd.png" alt="">
-                User name
+                <i class="name">User name</i>
             </button>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Perfil</a>
                 <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Ajustes</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="../Login_Sign-In/login.html">Cerrar sesión  <i class="fas fa-sign-out-alt"></i></a>
+                <a class="dropdown-item" onclick="logout()">Cerrar sesión  <i class="fas fa-sign-out-alt"></i></a>
             </div>
         </div>
       </form>
@@ -89,8 +89,8 @@
       <div class="row">
         <div class="form-group col-sm-4">
           <div class="md-form">
-            <input type="text" id="Email" class="form-control">
-            <label for="Email">Email</label>
+            <input type="text" id="email" class="form-control">
+            <label for="email">Email</label>
           </div>
         </div>
         <div class="form-group col-sm-4">
@@ -156,12 +156,12 @@
         </div>
       </div>
       <div>
-        <button type="button" class="btn btn-amber">Inscribir</button>
+        <button type="button" onclick="inscripcion()" class="btn btn-amber">Inscribir</button>
       </div>
     </div>
   </div>
 </body>
-<script src="./js/inscripciones.js"> </script>
+<script src="./js/inscripcion.js"> </script>
 <style>
     .btn-group img{
         width: 25px;

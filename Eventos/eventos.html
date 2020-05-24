@@ -56,10 +56,21 @@
     <br>
     <br>
     <br>
+    <br>
     <div class="col-xl-11 col-lg-6 mx-auto">
-
-        <h3 class="font-weight-bold text-center dark-grey-text pb-2">Eventos</h3>
-        <hr class=" my-4">
+        <div class="d-flex justify-content-between" >
+            <i></i>
+            <h3 class="font-weight-bold text-center dark-grey-text pb-2">Eventos</h3>             
+                       
+                <a class="div-i" href="/Add-Emp/Eve/addemp.html">
+                    <i class="addi fas fa-plus-circle fa-2x"></i>
+                    <div class="texti">Añadir evento</div>
+                </a>
+         
+    
+            
+        </div>
+        <hr class=" my-4"> 
         <div class="container my-5  ">
             <section>
                 <div class="row">
@@ -376,6 +387,46 @@
             background-color: #010A26 !important;
         }
     }
+
+
+.div-i{
+    text-decoration: none;
+    text-emphasis: none;
+    color:black;
+}
+
+.addi{
+        cursor: pointer;                          
+        transform:translate(0px);
+        -ms-transform:translate(0px); 
+        -moz-transform:translate(0px); 
+        -webkit-transform:translate(0px); 
+        -o-transform:translate(0px); 
+        -webkit-transition: all 30ms ease-in-out; 
+        -moz-transition: all 30ms ease-in-out; 
+        -ms-transition: all 30ms ease-in-out; 
+        -o-transition: all 30ms ease-in-out;  
+    }  
+    .div-i:hover .addi{
+        color: yellow;
+    }
+ .div-i .texti{        
+        display: none;    
+    }
+    .texti{
+        font-family: 'Open Sans'; 
+        font-size: 13px;   
+        z-index: -1;
+    }
+     .div-i:hover .texti{ 
+         cursor: pointer;
+        display: inline;        
+        transform:translate(-10px,0px);
+        -ms-transform:translate(-10px,0px); 
+        -moz-transform:translate(-10px,0px); 
+        -webkit-transform:translate(-10px,0px); 
+        -o-transform:translate(-10px,0px);  
+     } 
 </style>
 
 </html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+   
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+   
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#multiselect').multiselect({
+                buttonWidth: '400px'
+            });
+        });
+    </script>
+       
+    
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/index.js"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresas</title>
+</head>
+<body>
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark">
+        
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="/index.html"><img src="/img/logo.png" alt=""></a>
+        
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+        
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Inscripciones
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../kits/kits.html">Kits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Ingresos/ingresos.html">Ingresos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dashboard</a>
+                    </li>
+                </ul>
+                <!-- Links -->
+        
+                <form class="form-inline">
+                    <div class="btn-group">
+                        <button class="btn btn-outline-warning btn-rounded btn-sm dropdown-toggle" type="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="/img/xd.png" alt="">
+                            <i class="name">User name</i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Perfil</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Ajustes</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" onclick="logout()">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Collapsible content -->
+        </nav>
+        <!-- formulario empresa y eventos -->
+    <div class="col-xl-10 col-lg-10 mx-auto">
+        <div class="card shadown lg-6">
+            <div class="row">
+                <div class="form-group col-sm-6 ">
+                    <div class="mx-auto z-depth-1-half mb-4">
+                        <img src="https://mdbootstrap.com/img/Photos/Others/placeholder.jpg" class="img-fluid"
+                            alt="example placeholder">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="custom-file ">
+                            <input type="file" class="custom-file-input " id="imgevento" lang="es">
+                            <label class="custom-file-label " for="imgevento">Imagen del evento</label>
+                        </div>
+                    </div>
+                    <div class="md-form ">
+                        <button type="button" onclick="inscripcion()" class="btn btn-amber">Añadir</button>
+                    </div>
+                </div>
+                <div class="form-group col-sm-4">
+                    <h3>Datos del evento</h3>
+                    <div class="md-form">
+                        <input type="text" id="evento" class="form-control">
+                        <label for="evento">Nombre del evento</label>
+                    </div>                    
+                    <div class="md-form">
+                        <input type="date" id="borndate" class="form-control">
+                        <label for="borndate">Fecha de nacimiento</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="text" id="costoeven" class="form-control">
+                        <label for="costoeven">Costo del evento</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="text" id="preciopar" class="form-control">
+                        <label for="preciopar">Precio por participante</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="number" id="numpar" class="form-control">
+                        <label for="numpar">Numero de participantes</label>
+                    </div>
+                    <div class="md-form">
+                        <select class="browser-default custom-select form-control">
+                            <option selected>Seleccionar empresa</option>
+                            <option value="1">Empresa 1</option>
+                            <option value="2">Empresa 2</option>
+                            <option value="3">Empresa 3</option>
+                        </select>
+                    </div>
+                    <div class="">                        
+                        <span>Modalidad</span>
+                        <select class="browser-default custom-select form-control" id="multiselect" multiple="multiple">
+                            <option value="1">Mixto</option>
+                            <option value="2">Hombre</option>
+                            <option value="3">Mujeres</option>
+                            <option value="4">Juvenil</option>
+                            <option value="5">Libre</option>
+                        </select>
+                    </div>
+
+                </div>                  
+            </div>                                              
+               
+            
+        </div>
+    </div>
+    
+</body>
+
+
+
+<style>
+    .btn-default.dropdown-toggle {
+    background-color: #ffa000 !important;
+}
+
+.btn-default.dropdown-toggle:hover, .btn-default.dropdown-toggle:focus {
+    background-color: #ffa000 !important;
+}
+.show > .btn-default.dropdown-toggle {
+    background-color: #ffa000 !important;
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+}
+    .btn-group img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar-brand img {
+        width: 55px;
+    }
+
+    .card {
+        margin-top: 8%;
+        padding: 10px;
+    }
+
+    @media (max-width: 1000px) {
+        .cambio {
+            display: inline-block;
+        }
+    }
+    .img-fluid {
+    width: 100%;    
+    }
+    
+    .multiselect-container {
+        width: 100% !important;
+    }
+    
+</style>
+
+</html>

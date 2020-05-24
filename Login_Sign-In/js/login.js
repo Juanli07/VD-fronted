@@ -7,9 +7,10 @@ function login(){
     };
     axios.post(`${path}/login`, {email: $('#email').val(), contrasena: $('#password').val()}, config).then( res => {
         localStorage.setItem('token', res.data.token)
-        localStorage.setItem('user', res.data.user)
+        localStorage.setItem('user', res.data.user.nombre)
+        localStorage.setItem('email', res.data.user.email)
+        localStorage.setItem('cel', res.data.user.cel)
         location.href="../Servicios/servicios.html"
-        console.log(res.data)
     }).catch( err => {
         console.log(err['message'])
         showMsg(err)
@@ -25,6 +26,6 @@ function showMsg(msg){
 
 $(document).ready( () => {
     if(localStorage.getItem('token')){
-        location.href ="#"
+        location.href ="../Servicios/servicios.html"
     }
 })

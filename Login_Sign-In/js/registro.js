@@ -6,10 +6,10 @@ function registro(){
         }
     };
     axios.post(`${path}/user`, {
-        email: $('#emailsi').val(), nombre: $('#firstName' + ' ' + '#lastName').val(), 
-        contrasena: $('#pass').val(), cel: $('0').val(), isAdmin: $(' ').val(), salario: $(0).val(), ref_ce: $('0').val()}, config).then(res => {
+        email: $('#emailsi').val(), nombre: $('#firstName').val() + ' ' + $('#lastName').val(), 
+        contrasena: $('#pass').val(), cel: $('#cel').val(), salario: $(0).val()}, config).then(res => {
         localStorage.setItem('token', res.data.token)
-        localStorage.setItem('user', res.data.user)
+        localStorage.setItem('user', res.data.user.nombre)
         location.href = "../Servicios/servicios.html"
                     
             

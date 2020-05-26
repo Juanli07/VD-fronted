@@ -86,7 +86,22 @@
 
   <div class="col-xl-10 col-lg-10 mx-auto">
     <div class="card shadown lg-6">
-      <div class="row">
+      <div class="row d-flex justify-content-between">
+        <div class="form-group col-sm-1">
+          <a href="../Servicios/servicios.html" class="regevent">
+            <i class="fas fa-reply"></i>
+          </a>
+      
+        </div>
+        <div>
+          <h2 class="">Inscripciones</h2>
+        </div>
+      
+        <div class="form-group col-sm-1">
+      
+        </div>
+      </div>
+      <div class="row">        
         <div class="form-group col-sm-4">
           <div class="md-form">
             <input type="text" id="email" class="form-control">
@@ -106,7 +121,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row ">
         <div class="col-sm-4">
           <div class="md-form">
               <input type="date" id="borndate" class="form-control">
@@ -138,22 +153,20 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <div class="md-form">
             <input type="text" id="club" class="form-control">
             <label for="club">Club</label>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col">
+        <div class="col-sm-6">
           <div class="md-form">
             <select id="conv" class="browser-default custom-select form-control">
               <option selected>Seleccione una Carrera</option>
             </select>
           </div>
         </div>
-      </div>
+      </div>      
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <p class="lead">Aún no ha seleccionado un contacto de emergencia</p>
@@ -198,14 +211,18 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
-        <button type="button" onclick="setCe()" data-dismiss="modal" class="btn btn-primary">añadir</button>
+        <button type="button" class="btn btn-outline-warning waves-effect" data-dismiss="modal">Salir</button>
+        <button type="button" onclick="setCe()" data-dismiss="modal" class="btn btn-amber ">añadir</button>
       </div>
     </div>
   </div>
 </div>
 <script src="./js/inscripcion.js"> </script>
 <style>
+  .regevent{
+        text-decoration: none;
+        color: #ffa000;
+    }
     .btn-group img{
         width: 25px;
         height: 25px;
@@ -222,5 +239,27 @@
     display: inline-block;
   }
 }
+
+    .homenavbar {
+        border-bottom: 3px solid yellow;
+        margin-left: 80px;
+        margin-right: 80px;
+        background-color: #010A26 !important;
+    }
+
+
+    .top-nav-collapse {
+        border-bottom: 3px solid yellow;
+    }
+
+    .navbar:not(.top-nav-collapse) {
+        background-color: #010A26 !important;
+    }
+
+    @media (max-width: 740px) {
+        .navbar:not(.top-nav-collapse) {
+            background-color: #010A26 !important;
+        }
+    }
 </style>
 </html>

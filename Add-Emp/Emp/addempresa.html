@@ -22,6 +22,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Añadir empresa</title>
+
+    <script src="/js/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
 </head>
 <body>
     <!--Navbar-->
@@ -122,7 +127,7 @@
                     </div>
                 </div>
                 <div class="md-form ">
-                    <button type="button" class="btn btn-amber">Añadir</button>
+                    <button type="button" onclick="postEmp()" class="btn btn-amber">Añadir</button>
                 </div>
                 
             </div> 
@@ -132,6 +137,7 @@
     </div>
     
 </body>
+<script src="./js/addempresa.js"></script>
 <style>
     .regevent{
         text-decoration: none;

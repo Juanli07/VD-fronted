@@ -37,7 +37,7 @@
          
     <!-- axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="/js/index.js"></script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -141,12 +141,8 @@
                     </div>
                     <div class="md-form d-flex ">
                         <div class="col-sm-8">
-                            <select class="browser-default custom-select form-control">
-                            <option selected>Seleccionar empresa</option>
-                            <option value="1">Empresa 1</option>
-                            <option value="2">Empresa 2</option>
-                            <option value="3">Empresa 3</option>
-                        </select>
+                            <select id="emp" class="browser-default custom-select form-control">
+                            </select>
                         </div>
                         <div class="col-sm-4">
                              <a class="div-i" href="../Emp/addempresa.html">
@@ -177,6 +173,7 @@
 </body>
 
 <script src="../js/preview.js"></script>
+<script src="../js/addevento.js"></script>
 
 <style>
     .btn-default.dropdown-toggle {

@@ -29,8 +29,8 @@
     
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#multiselect').multiselect({
-                buttonWidth: '400px'
+            $('#multiselect').multiselect({                
+                color: 'black'
             });
         });
     </script>
@@ -38,6 +38,11 @@
     <!-- axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/index.js"></script>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,7 +119,7 @@
                     </div>
                     
                     <div class="md-form ">
-                        <button type="button" onclick="evento()" class="btn btn-amber">Añadir</button>
+                        <button type="button" onclick="evento()" class="btn btn-amber" id="anadir">Añadir</button>
                     </div>
                 </div>
                 <div class="form-group col-sm-5">
@@ -140,6 +145,7 @@
                         <label for="numpar">Numero de participantes</label>
                     </div>
                     <div class="md-form d-flex ">
+                        <span>Empresa</span>
                         <div class="col-sm-8">
                             <select id="emp" class="browser-default custom-select form-control">
                             </select>
@@ -147,14 +153,14 @@
                         <div class="col-sm-4">
                              <a class="div-i" href="../Emp/addempresa.html">
                             <i class="addi fas fa-plus-circle fa-x "></i>
-                            <div class="texti">Añadir empresa</div>
+                            <div class="texti">Añadir</div>
                             </a>
                         </div>
                        
                     </div>
                     <div class="">                        
                         <span>Modalidad</span>
-                        <select class="browser-default custom-select form-control" id="multiselect" multiple="multiple">
+                        <select   class="browser-default custom-select form-control" id="multiselect" multiple="multiple">
                             <option value="1">Mixto</option>
                             <option value="2">Hombre</option>
                             <option value="3">Mujeres</option>
@@ -174,6 +180,8 @@
 
 <script src="../js/preview.js"></script>
 <script src="../js/addevento.js"></script>
+<script src="../js/evento.js" ></script>
+
 
 <style>
     .btn-default.dropdown-toggle {

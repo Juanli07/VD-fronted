@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 function setEmpresas(){
     axios.get(`${path}/findAll/empresa`).then( res => {
-        let options = '<option value="-1">Seleccione una carrera</option>'
+        let options = '<option value="-1">- - -Empresa- - -</option>'
         res.data.forEach( item => options+=`<option value="${item.id}">${item.nombre}</option>`)
         $('#emp').html(options)
     })

@@ -23,15 +23,15 @@ function evento (){
     $('#multiselect option:selected').each(function () {
         datostxt.push($(this).text());
         datosvalue.push($(this).val());
-    });    
-   
+    });             
+     
     axios.post(`${path}/insertconv`,{        
         id_empresa: $('#emp').val(),
         titulo: $('#evento').val(),
         banner: $('#imgInp').val(),
         costo: $('#costoeven').val(),
         fecha: $('#borndate').val(),
-        ref_modalidad: $('#multiselect').val()  ,
+        ref_modalidad: datostxt.toString() ,
         precio: $('#preciopar').val(),
         num_participantes: $('#numpar').val()
     }).then((data) => {

@@ -29,24 +29,22 @@
     
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#multiselect').multiselect({                
-                color: 'black'
+            $('#multiselect').multiselect({                                
+                width: '300px'
             });
         });
     </script>
          
     <!-- axios -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/js/index.js"></script>
-
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>    
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
     
+    <script src="/js/index.js"></script>        
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresas</title>
+    <title>Eventos</title>
 </head>
 <body>
         <!--Navbar-->
@@ -113,47 +111,47 @@
                         <div class="d-flex justify-content-center">
                             <div class="custom-file ">
                                 <input type="file" class="custom-file-input " id="imgInp" lang="es">
-                                <label class="custom-file-label " for="imgInp">- - - - - -banner publicitario- - - - - -</label>
+                                <label class="custom-file-label bordeselect" for="imgInp">- - - - - -banner publicitario- - - - - -</label>
                             </div>
                         </div>
                     </div>
                     
                     <div class="md-form ">
-                        <button type="button" onclick="evento()" class="btn btn-amber" id="anadir">Añadir</button>
+                        <button type="button" onclick="evento()" class="btn btn-amber" id="anadir">Añadir empresa</button>
                     </div>
                 </div>
-                <div class="form-group col-sm-5">
+                <div class="form-group col-sm-4">
                     <h3>Datos del evento</h3>
                     <div class="md-form">
-                        <input type="text" id="evento" class="form-control">
+                        <input type="text" id="evento" class="form-control ">
                         <label for="evento">Nombre del evento</label>
                     </div>                    
                     <div class="md-form">
-                        <input type="date" id="borndate" class="form-control">
+                        <input type="date" id="borndate" class="form-control ">
                         <label for="borndate">Fecha del evento</label>
                     </div>
                     <div class="md-form">
-                        <input type="text" id="costoeven" class="form-control">
+                        <input type="text" id="costoeven" class="form-control ">
                         <label for="costoeven">Costo del evento</label>
                     </div>
                     <div class="md-form">
-                        <input type="text" id="preciopar" class="form-control">
+                        <input type="text" id="preciopar" class="form-control ">
                         <label for="preciopar">Precio por participante</label>
                     </div>
                     <div class="md-form">
-                        <input type="number" id="numpar" class="form-control">
+                        <input type="number" id="numpar" class="form-control ">
                         <label for="numpar">Numero de participantes</label>
                     </div>
                     <div class="md-form d-flex ">
                         <span>Empresa</span>
                         <div class="col-sm-8">
-                            <select id="emp" class="browser-default custom-select form-control">
+                            <select id="emp" class="browser-default custom-select form-control bordeselect">
                             </select>
                         </div>
                         <div class="col-sm-4">
                              <a class="div-i" href="../Emp/addempresa.html">
                             <i class="addi fas fa-plus-circle fa-x "></i>
-                            <div class="texti">Añadir</div>
+                            <div class="texti">Empresa</div>
                             </a>
                         </div>
                        
@@ -184,10 +182,35 @@
 
 
 <style>
-    .btn-default.dropdown-toggle {
-    background-color: #ffa000 !important;
+    
+.btn-default.dropdown-toggle {
+    background-color: #fff !important;
+    border: 1px solid #ffa000 !important;
+    color: black !important;    
 }
 
+.md-form input:not([type]), .md-form input[type="text"]:not(.browser-default), .md-form input[type="password"]:not(.browser-default), .md-form input[type="email"]:not(.browser-default), .md-form input[type="url"]:not(.browser-default), .md-form input[type="time"]:not(.browser-default), .md-form input[type="date"]:not(.browser-default), .md-form input[type="datetime"]:not(.browser-default), .md-form input[type="datetime-local"]:not(.browser-default), .md-form input[type="tel"]:not(.browser-default), .md-form input[type="number"]:not(.browser-default), .md-form input[type="search"]:not(.browser-default), .md-form input[type="phone"]:not(.browser-default), .md-form input[type="search-md"], .md-form textarea.md-textarea {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: transparent;
+    border: none;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+    border-bottom: 1px solid #ffa000;
+    border-radius: 0;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+}
+
+.bordeselect{
+    border: 1px solid  #ffa000;
+}
 .btn-default.dropdown-toggle:hover, .btn-default.dropdown-toggle:focus {
     background-color: #ffa000 !important;
 }
@@ -264,6 +287,27 @@
         -webkit-transform:translate(-10px,0px); 
         -o-transform:translate(-10px,0px);  
      } 
+      .homenavbar {
+        border-bottom: 3px solid yellow;
+        margin-left: 80px;
+        margin-right: 80px;
+        background-color: #010A26 !important;
+    }
+
+
+    .top-nav-collapse {
+        border-bottom: 3px solid yellow;
+    }
+
+    .navbar:not(.top-nav-collapse) {
+        background-color: #010A26 !important;
+    }
+
+    @media (max-width: 740px) {
+        .navbar:not(.top-nav-collapse) {
+            background-color: #010A26 !important;
+        }
+    }
 </style>
 
 </html>

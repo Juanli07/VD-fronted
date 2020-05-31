@@ -54,14 +54,17 @@
           </a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="../Add-Emp/Eve/addemp.html">Eventos</a>
+        </li>
+         <li class="nav-item">
+            <a class="nav-link" href="../Add-Emp/Emp/addempresa.html">Empresas</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="../kits/kits.html">Kits</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../Ingresos/ingresos.html">Ingresos</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Dashboard</a>
-        </li>
+          <a class="nav-link" href="../Ingresos/ingresos.html">Dashboard</a>
+        </li>        
       </ul>
       <!-- Links -->
   
@@ -129,9 +132,9 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <div class=" md-form  d-flex justify-content-lg-between ">
+          <div class=" col-sm-8 md-form  d-flex justify-content-lg-between ">
             <div class="">
-              <span class="input-group-text md-addon">Género</span>              
+              <span class="">Género</span>              
             </div>
             <div class="" id="MaterialButton-addon4">
               <div class="custom-control custom-radio custom-control-inline">
@@ -161,7 +164,7 @@
         </div>
         <div class="col-sm-6">
           <div class="md-form">
-            <select id="conv" class="browser-default custom-select form-control">
+            <select id="conv" class="browser-default custom-select form-control bordeselect">
               <option selected>Seleccione una Carrera</option>
             </select>
           </div>
@@ -190,7 +193,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body col-sm-9 mx-auto">
         <form action="">
           <div class="md-form">
             <input type="text" id="emailm" class="form-control">
@@ -266,5 +269,27 @@
             background-color: #010A26 !important;
         }
     }
+.md-form input:not([type]), .md-form input[type="text"]:not(.browser-default), .md-form input[type="password"]:not(.browser-default), .md-form input[type="email"]:not(.browser-default), .md-form input[type="url"]:not(.browser-default), .md-form input[type="time"]:not(.browser-default), .md-form input[type="date"]:not(.browser-default), .md-form input[type="datetime"]:not(.browser-default), .md-form input[type="datetime-local"]:not(.browser-default), .md-form input[type="tel"]:not(.browser-default), .md-form input[type="number"]:not(.browser-default), .md-form input[type="search"]:not(.browser-default), .md-form input[type="phone"]:not(.browser-default), .md-form input[type="search-md"], .md-form textarea.md-textarea {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: transparent;
+    border: none;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+    border-bottom: 1px solid #ffa000;
+    border-radius: 0;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+}
+.bordeselect{
+    border: 1px solid  #ffa000;
+}
+
 </style>
 </html>

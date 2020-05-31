@@ -42,8 +42,3 @@ function evento (){
     })
     }
 
-
-$(document).ready(() => {
-    checkAccess()
-    setName()
-})

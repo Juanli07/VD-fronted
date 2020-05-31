@@ -9,6 +9,6 @@ function readImage(input) {
 }
 
 $("#imgInp").change(function () {
-    // Código a ejecutar cuando se detecta un cambio de archivO
+    // Código a ejecutar cuando se detecta un cambio de archivo
     readImage(this);
 });

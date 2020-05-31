@@ -10,6 +10,7 @@ function login(){
         localStorage.setItem('user', res.data.user.nombre)
         localStorage.setItem('email', res.data.user.email)
         localStorage.setItem('cel', res.data.user.cel)
+        localStorage.setItem('isAdmin', res.data.user.isAdmin)
         location.href="../Servicios/servicios.html"
     }).catch( err => {
         console.log(err['message'])

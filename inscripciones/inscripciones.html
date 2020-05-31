@@ -121,6 +121,7 @@
           <div class="md-form">
             <input type="text" id="lastName" class="form-control">
             <label for="lastName">Apellidos</label>
+            <input type="text" id="id_usuario" hidden>
           </div>
         </div>
       </div>
@@ -138,11 +139,11 @@
             </div>
             <div class="" id="MaterialButton-addon4">
               <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" class="custom-control-input" id="rbmale" name="group">
+                  <input value="M" type="radio" class="custom-control-input" id="rbmale" name="group">
                   <label class="custom-control-label" for="rbmale">M</label>
               </div>
               <div class="custom-control custom-radio custom-control-inline">
-                  <input type="radio" class="custom-control-input" id="rbfemale" name="group">
+                  <input value="F" type="radio" class="custom-control-input" id="rbfemale" name="group">
                   <label class="custom-control-label" for="rbfemale">F</label>
               </div>
             </div>
@@ -164,11 +165,7 @@
         </div>
         <div class="col-sm-4">
           <div class="md-form">
-<<<<<<< HEAD
-            <select id="conv" class="browser-default custom-select form-control bordeselect">
-=======
             <select id="conv" onchange="setCategorias()" class="browser-default custom-select form-control">
->>>>>>> f1d0d8846766f8cc60a30cc66cfb65dcea192bf8
               <option selected>Seleccione una Carrera</option>
             </select>
           </div>

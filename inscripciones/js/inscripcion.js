@@ -18,6 +18,7 @@ function inscripcion() {
         ref_ce: $('#ce').val()
     }, config).then(res => {
         idpart = res.data.participante.id
+        console.log(idpart)
     }).catch(err => {
         console.log(err)
     })

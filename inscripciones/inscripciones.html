@@ -159,14 +159,29 @@
             <label for="club">Club</label>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <div class="md-form">
-            <select id="conv" class="browser-default custom-select form-control">
+            <select id="conv" onchange="setCategorias()" class="browser-default custom-select form-control">
               <option selected>Seleccione una Carrera</option>
             </select>
           </div>
         </div>
-      </div>      
+        <div class="col-sm-4">
+          <div class="md-form">
+            <select id="categoria" class="browser-default custom-select form-control">
+              <option selected>Seleccione una Categoria</option>
+            </select>
+          </div>
+        </div>
+      </div> 
+      <div class=" row">
+        <div class="col-sm-4">
+          <div class="md-form">
+            <input type="text" id="numpart" class="form-control">
+            <label for="numpart">Numero</label>
+          </div>
+        </div>
+      </div>    
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
           <p class="lead">Aún no ha seleccionado un contacto de emergencia</p>

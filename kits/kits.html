@@ -54,19 +54,22 @@
 
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../inscripciones/inscripciones.html">Inscripciones
+                <li class="nav-item ">
+                    <a class="nav-link" href="/inscripciones/inscripciones.html">Inscripciones
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="../Add-Emp/Eve/addemp.html">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Add-Emp/Emp/addempresa.html">Empresas</a>
+                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Kits</a>
+                    <a class="nav-link" href="/kits/kits.html">Kits</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Ingresos/ingresos.html">Ingresos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
+                    <a class="nav-link" href="/Ingresos/ingresos.html">Dashboard</a>
                 </li>
             </ul>
             <!-- Links -->
@@ -109,7 +112,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="md-form">
-                        <select class="browser-default custom-select form-control">
+                        <select class="browser-default custom-select form-control bordeselect">
                             <option selected>Seleccione una carrera</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -119,7 +122,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="md-form">
-                        <select class="browser-default custom-select form-control">
+                        <select class="browser-default custom-select form-control bordeselect">
                             <option selected>Seleccione un Participante</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -129,7 +132,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="md-form">
-                        <select class="browser-default custom-select form-control">
+                        <select class="browser-default custom-select form-control bordeselect">
                             <option selected>Seleccione un articulo</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
@@ -192,5 +195,28 @@
         text-decoration: none;
         color: #ffa000;
     }
+
+    .md-form input:not([type]), .md-form input[type="text"]:not(.browser-default), .md-form input[type="password"]:not(.browser-default), .md-form input[type="email"]:not(.browser-default), .md-form input[type="url"]:not(.browser-default), .md-form input[type="time"]:not(.browser-default), .md-form input[type="date"]:not(.browser-default), .md-form input[type="datetime"]:not(.browser-default), .md-form input[type="datetime-local"]:not(.browser-default), .md-form input[type="tel"]:not(.browser-default), .md-form input[type="number"]:not(.browser-default), .md-form input[type="search"]:not(.browser-default), .md-form input[type="phone"]:not(.browser-default), .md-form input[type="search-md"], .md-form textarea.md-textarea {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: transparent;
+    border: none;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+    border-bottom: 1px solid #ffa000;
+    border-radius: 0;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+}
+.bordeselect {
+    border: 1px solid #ffa000;
+}
+
 </style>
 </html>

@@ -20,3 +20,10 @@ function checkAccess(){
         location.href="../Login_Sign-In/login.html"
     })
 }
+$(document).ready( () => {
+    if(localStorage.getItem('token')){
+        $('#top').html('Servicios')
+    }else{
+        $('#top').html('Ingresar')
+    }
+})

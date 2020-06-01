@@ -17,13 +17,14 @@ function inscripcion() {
         club: $('#club').val(),
         ref_ce: $('#ce').val()
     }, config).then(res => {
-        idpart = res.data.participante.id
+        $('#id_usuario').val(res.data.participante.id)
+        // console.log(idpart)
     }).catch(err => {
         console.log(err)
     })
     axios.post(`${path}/insertins`, {
         id_convocatoria: $('#conv').val(),
-        id_usuario: idpart,
+        id_usuario: $('#id_usuario').val(),
         modalidad: $('#categoria').val(),
         numero_participante: $('#numpart').val()
     }).then( res => {

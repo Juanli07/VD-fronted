@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/stylekits.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -9,74 +12,78 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
-    
+
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir empresa</title>
 
-    
+    <!-- axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
-    <script src="/js/index.js"></script>
+    <script src="../js/index.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresas</title>
+    <title>Kits</title>
 </head>
+
 <body>
     <!--Navbar-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark">
-    
+
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="/index.html"><img src="/img/logo.png" alt=""></a>
-    
+        <a class="navbar-brand" href="./index.html"><img src="../img/logo.png" alt=""></a>
+
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
             aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-    
+
         <!-- Collapsible content -->
         <div class="collapse navbar-collapse" id="basicExampleNav">
-    
+
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item ">
-                    <a class="nav-link" href="/inscripciones/inscripciones.html">Inscripciones
+                    <a class="nav-link" href="./inscripciones.html">Inscripciones
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="/Add-Emp/Eve/addemp.html">Eventos</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/Add-Emp/Emp/addempresa.html">Empresas</a>
+                    <a class="nav-link" href="./addemp.html">Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Ingresos/ingresos.html">Dashboard</a>
+                    <a class="nav-link" href="./addempresa.html">Empresas</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./kits.html">Kits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./ingresos.html">Dashboard</a>
                 </li>
             </ul>
             <!-- Links -->
-    
+
             <form class="form-inline">
                 <div class="btn-group">
-                    <button class="btn btn-outline-warning btn-rounded btn-sm dropdown-toggle" type="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="/img/xd.png" alt="">
+                    <button class="btn btn-outline-warning btn-rounded btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="../img/xd.png" alt="">
                         <i class="name">User name</i>
                     </button>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Perfil</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Ajustes</a>
+                        <a class="dropdown-item" href="./users.html"><i class="fas fa-cogs"></i> Administrar</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" onclick="logout()">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </div>
@@ -85,108 +92,98 @@
         </div>
         <!-- Collapsible content -->
     </nav>
-    <!-- formulario empresas -->
     <div class="col-xl-10 col-lg-10 mx-auto">
         <div class="card shadown lg-6">
             <div class="row d-flex justify-content-between">
-                <div class="form-group col-sm-1" >
-                    <a href="../Eve/addemp.html" class="regevent">
-                       <i class="fas fa-reply"></i> 
+                <div class="form-group col-sm-1">
+                    <a href="./servicios.html" class="regevent">
+                       
                     </a>
-                    
+            
                 </div>
-                <div >
-                    <h2 class="">Registrar Empresa</h2>
+                <div>
+                    <h2 class="">Kits</h2>
                 </div>
-                
-                <div class="form-group col-sm-1" >
-
+            
+                <div class="form-group col-sm-1">
+            
                 </div>
             </div>
-            
-            <div class="row mx-auto">                
-                <div class="form-group col-sm-6">
+            <div class="row">
+                <div class="col-sm-4">
                     <div class="md-form">
-                        <input type="text" id="nomemp" class="form-control ">
-                        <label for="nomemp">Nombre de empresa</label>
+                        <select class="browser-default custom-select form-control bordeselect">
+                            <option selected>Seleccione una carrera</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
                     </div>
                 </div>
-                <div class="form-group col-sm-6">
+                <div class="col-sm-4">
                     <div class="md-form">
-                        <input type="text" id="telemp" class="form-control ">
-                        <label for="telemp">Telefono</label>
+                        <select class="browser-default custom-select form-control bordeselect">
+                            <option selected>Seleccione un Participante</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
                     </div>
                 </div>
-               
-                <div class="form-group col-sm-6">
-                    <div class="md-form">
-                        <input type="text" id="diremp" class="form-control ">
-                        <label for="diremp">Direccion</label>
-                    </div>
-                </div>
-                <div class="form-group col-sm-6">
-                    <div class="md-form">
-                        <input type="text" id="nomrep" class="form-control ">
-                        <label for="nomrep">Nombre representante</label>
-                    </div>
-                </div>
-                <div class="md-form ">
-                    <button type="button" onclick="postEmp()" class="btn btn-amber">Añadir Empresa</button>
-                </div>
-                
-            </div> 
-                
-           
+            </div>
+            <button type="button" class="btn btn-warning ml-auto" onclick="add()">Añadir <i class="fas fa-plus-circle"></i></button>
+            <h2 class="mb-3">Articulos seleccionados</h2>
+            <div class="table-responsive">
+                <table id="articles" class="table">
+                    <thead>
+                        <tr>
+                            <th>Articulo</th>
+                            <th>Talla</th>
+                            <th>Cantidad</th>
+                            <th>Evento</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td> 
+                            <div class="md-form">
+                                name article
+                            </div>
+                        </td>
+                        <td>
+                            <div class="md-form">
+                                <input type="number" id="size" min="24" value="24" class="form-control">
+                                <label for="size">Talla</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="md-form">
+                                <input type="number" id="amount" min="1" value="1" class="form-control">
+                                <label for="amount">Cantidad</label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="md-form">
+                                Carrera xd
+                            </div>
+                        </td>
+                        <td>
+                            <div class="md-form">
+                                <a href="" id="del"><i class="fas fa-minus-circle"></i></a>
+                            </div>
+                        </td>
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-warning ml-auto">Enviar</button>
+            </div>
         </div>
     </div>
-    
 </body>
-<script src="./js/addempresa.js"></script>
+<script src="./js/indexkits.js"></script>
 <style>
-    
-    .regevent{
+     .regevent{
         text-decoration: none;
         color: #ffa000;
-    }
-     .btn-group img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .navbar-brand img {
-        width: 55px;
-    }
-
-    .card {
-        margin-top: 8%;
-        padding: 10px;
-    }
-
-    @media (max-width: 1000px) {
-        .cambio {
-            display: inline-block;
-        }
-    }
-     .homenavbar {
-        border-bottom: 3px solid yellow;
-        margin-left: 80px;
-        margin-right: 80px;
-        background-color: #010A26 !important;
-    }
-
-
-    .top-nav-collapse {
-        border-bottom: 3px solid yellow;
-    }
-
-    .navbar:not(.top-nav-collapse) {
-        background-color: #010A26 !important;
-    }
-
-    @media (max-width: 740px) {
-        .navbar:not(.top-nav-collapse) {
-            background-color: #010A26 !important;
-        }
     }
 
     .md-form input:not([type]), .md-form input[type="text"]:not(.browser-default), .md-form input[type="password"]:not(.browser-default), .md-form input[type="email"]:not(.browser-default), .md-form input[type="url"]:not(.browser-default), .md-form input[type="time"]:not(.browser-default), .md-form input[type="date"]:not(.browser-default), .md-form input[type="datetime"]:not(.browser-default), .md-form input[type="datetime-local"]:not(.browser-default), .md-form input[type="tel"]:not(.browser-default), .md-form input[type="number"]:not(.browser-default), .md-form input[type="search"]:not(.browser-default), .md-form input[type="phone"]:not(.browser-default), .md-form input[type="search-md"], .md-form textarea.md-textarea {
@@ -207,5 +204,9 @@
     transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
 }
+.bordeselect {
+    border: 1px solid #ffa000;
+}
+
 </style>
 </html>

@@ -28,7 +28,7 @@ function inscripcion() {
         modalidad: $('#categoria').val(),
         numero_participante: $('#numpart').val()
     }).then( res => {
-        location.href = "../inscripciones/inscripciones.html"
+        location.href = "../inscripciones.html"
     }).catch(err => {
 
     })

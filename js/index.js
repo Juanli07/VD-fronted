@@ -1,7 +1,7 @@
 const path = "https://vd-0.herokuapp.com/vd"
 function logout(){
     localStorage.clear();
-    location.href='../Login_Sign-In/login.html'
+    location.href ='../login.html'
 }
 function setName(){
     $('.name').html(localStorage.getItem('user'))
@@ -17,7 +17,7 @@ function checkAccess(){
     }).catch(err => {
         console.log(err)
         localStorage.clear();
-        location.href="../Login_Sign-In/login.html"
+        location.href="../login.html"
     })
 }
 $(document).ready( () => {

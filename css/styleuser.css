@@ -1,0 +1,33 @@
+.btn-group img{
+    width: 25px;
+    height: 25px;
+}
+.navbar-brand img {
+    width: 55px;
+}
+.card {
+  margin-top: 8%;
+  padding:50px; 
+}
+
+.homenavbar {
+  border-bottom   : 3px solid yellow;
+  margin-left     : 80px;
+  margin-right    : 80px;
+  background-color: #010A26 !important;
+}
+
+
+.top-nav-collapse {
+  border-bottom: 3px solid yellow;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background-color: #010A26 !important;
+}
+
+@media (max-width: 740px) {
+  .navbar:not(.top-nav-collapse) {
+    background-color: #010A26 !important;
+  }
+}

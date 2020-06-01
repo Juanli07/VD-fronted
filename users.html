@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/styleuser.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
         <!-- Google Fonts -->
@@ -31,6 +31,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
     
 
+      <script src="./js/index.js" ></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrar usuarios</title>
@@ -40,7 +41,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark">
 
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="/index.html"><img src="../img/logo.png" alt=""></a>
+    <a class="navbar-brand" href="./index.html"><img src="../img/logo.png" alt=""></a>
   
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -54,24 +55,24 @@
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="../Servicios/servicios.html">Servicios</a>
+          <a class="nav-link" href="./servicios.html">Servicios</a>
         </li>       
       </ul>
       <!-- Links -->
   
       <form class="form-inline">
         <div class="btn-group">
-            <button class="btn btn-outline-warning btn-rounded btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-                <img src="../img/xd.png" alt="">
-                <i class="name">User name</i>
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Perfil</a>
-                <a class="dropdown-item" href="#"><i class="fas fa-cogs"></i> Ajustes</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" onclick="logout()">Cerrar sesión  <i class="fas fa-sign-out-alt"></i></a>
-            </div>
+          <button class="btn btn-outline-warning btn-rounded btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <img src="../img/xd.png" alt="">
+            <i class="name">User name</i>
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Perfil</a>
+            
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" onclick="logout()">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
+          </div>
         </div>
       </form>
     </div>
@@ -116,5 +117,5 @@
           </div>
   </div>
 </body>
-<script src="js/users.js"></script>
+<script src="./js/users.js"></script>
 </html>

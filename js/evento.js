@@ -41,4 +41,7 @@ function evento (){
         toastr.error('Error al crear evento');
     })
     }
-
+$(document).ready(function () {
+    checkAccess()
+    setName()    
+});

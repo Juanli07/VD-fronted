@@ -11,7 +11,7 @@ function login(){
         localStorage.setItem('email', res.data.user.email)
         localStorage.setItem('cel', res.data.user.cel)
         localStorage.setItem('isAdmin', res.data.user.isAdmin)
-        location.href="../Servicios/servicios.html"
+        location.href="../servicios.html"
     }).catch( err => {
         console.log(err['message'])
         showMsg(err)
@@ -27,6 +27,6 @@ function showMsg(msg){
 
 $(document).ready( () => {
     if(localStorage.getItem('token')){
-        location.href ="../Servicios/servicios.html"
+        location.href ="../servicios.html"
     }
 })

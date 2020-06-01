@@ -1,0 +1,11 @@
+.btn-group img{
+    width: 25px;
+    height: 25px;
+}
+.navbar-brand img {
+    width: 55px;
+}
+.card {
+  margin-top: 8%;
+  padding:50px; 
+}

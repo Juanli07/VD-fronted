@@ -34,8 +34,10 @@
     <link rel="stylesheet" href="./css/styleingresos.css">
 
 
-    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,7 +68,7 @@
             <li class="nav-item ">
                 <a class="nav-link" href="./addemp.html">Eventos</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Resultados</a>
             </li>
             <li class="nav-item active">
@@ -232,14 +234,14 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="md-form">
-                            <select id="conv" onchange="setCategorias()" class="browser-default custom-select form-control bordeselect ">
+                            <select id="conv" onchange="genrep()" class="browser-default custom-select form-control bordeselect ">
                                 <option selected>Seleccione una Carrera</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="md-form">
-                            <button id="download" type="button" class="btn btn-warning" onclick="genrep()">Generar reporte</button>
+                            <button id="download" type="button" onclick="dwlreporte()" class="btn btn-warning">Descargar reporte</button>
                         </div>
                     </div>
                 </div>
@@ -268,36 +270,29 @@
             </div>
             <div class="col-lg-6 col-md-6 mb-4">
                 <div class="card" id="ingresosd">
-                    <div id="participantesd" class="card-header">Ingresos generales del evento</div>
+                    <div id="participantesd" class="card-header">Reporte</div>
                     
                     <div class="row">
                         <div class="col-lg-11">
-                            <h4>Nota:</h4>
-                            <p>Incluye todos los ingresos cobrados en linea o en mostrador</p>
+                            <p>Los articulos en la tabla ya han sido entregados</p>
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <table class="table " id="tablexd">
+                        <table id="articles" class="table">
                             <thead>
                                 <tr>
-                                    <th class="titulot">Concepto</th>
-                                    <th class="titulot">Medio</th>
-                                    <th class="titulot">Cargo</th>
+                                    <th>Nombre</th>
+                                    <th>Modalidad</th>
+                                    <th>Kit<t/th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Inscripción</td>
-                                    <td>Punto de venta</td>
-                                    <td>$200</td>
-                                </tr>
-                                <tr>
-                                    <td>Kit</td>
-                                    <td>Punto de venta</td>
-                                    <td>$800</td>
-                                </tr>
+                            <tbody class="bd">
+                                <td>
+                                    
+                                </td>
                             </tbody>
                         </table>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -317,9 +312,26 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Estado kit</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
 
-
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" onclick="changeStatus()" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="./js/ingresos.js"></script>

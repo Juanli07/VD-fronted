@@ -1,4 +1,5 @@
 var datostxt = new Array();   
+let xd = 0;
 
 function genrep() {             
     $('#conv option:selected').each(function () {
@@ -23,7 +24,7 @@ function genrep() {
 
     var lineDiv2 = document.getElementById('plotlyChart2');
     var data2 = [{
-        values: [19, 26, 55],
+        values: [getRamdom(), getRamdom(), getRamdom()],
         labels: ['Faltante', 'Hombres', 'Mujeres'],
         type: 'pie'
     }];
@@ -33,7 +34,18 @@ function genrep() {
     };
 
     Plotly.newPlot(lineDiv2, data2, layout2);
-}    
+    xd = 0;
+    datostxt = new Array();
+    setreporte()
+
+} 
+
+function getRamdom(){
+    let max = 100 - xd;
+    rmd = Math.random() * (max - 0) + 0;
+    xd += rmd;
+    return rmd;
+}
  
 
 

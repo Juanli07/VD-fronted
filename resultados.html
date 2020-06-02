@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/css/mdb.min.css" rel="stylesheet">
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.16.0/js/mdb.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/styleingresos.css">
+    
+    
+    <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+</head>
+<body>
+    <div class="col-lg-6 col-md-6 mb-4">
+        <div class="card">
+    
+            <!-- Card header -->
+            <div id="participantesd" class="card-header">Resultados de la carrera</div>
+    
+            <!--Card content-->
+            <div class="card-body">                
+                <h4>Seleciona la modalidad del evento:</h4>
+    
+                <form action="">
+                    <div class="">
+                        <span>Modalidad</span>
+                        <select class="browser-default custom-select form-control bordeselect" id="multiselect">
+                            <option value="1">Libre</option>
+                            <option value="2">Submaster</option>
+                            <option value="3">Master</option>
+                            <option value="4">Veteranos</option>
+                            <option value="5">Veteranos-plus</option>
+                        </select>
+                    </div>
+                    <span>Primer lugar:</span>                   
+                    <div class="row col-lg-11 col-md-11 mb-4 mx-auto">                                                                      
+                        <div class="col">
+                            <!-- nombres -->
+                            <div class="md-form">
+                                <input type="text" id="firstName" class="form-control">
+                                <label for="firstName">Nombre(s)</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- apellido -->
+                            <div class="md-form">
+                                <input type="text" id="lastName" class="form-control">
+                                <label for="lastName">Apellido(s)</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- apellido -->
+                            <div class="md-form">
+                                <input type="number" id="lastName" class="form-control">
+                                <label for="lastName">Tiempo</label>
+                            </div>
+                        </div>
+                    
+                    </div>      
+                    <span>Segundo lugar:</span>
+                    <div class="row col-lg-11 col-md-11 mb-4 mx-auto">
+                        <div class="col">
+                            <!-- nombres -->
+                            <div class="md-form">
+                                <input type="text" id="firstName" class="form-control">
+                                <label for="firstName">Nombre(s)</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- apellido -->
+                            <div class="md-form">
+                                <input type="text" id="lastName" class="form-control">
+                                <label for="lastName">Apellido(s)</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- apellido -->
+                            <div class="md-form">
+                                <input type="number" id="lastName" class="form-control">
+                                <label for="lastName">Tiempo</label>
+                            </div>
+                        </div>
+                      
+                    </div>
+                    <span>Tercer lugar:</span>
+                    <div class="row col-lg-11 col-md-11 mb-4 mx-auto">
+                        <div class="col">
+                            <!-- nombres -->
+                            <div class="md-form">
+                                <input type="text" id="firstName" class="form-control">
+                                <label for="firstName">Nombre(s)</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- apellido -->
+                            <div class="md-form">
+                                <input type="text" id="lastName" class="form-control">
+                                <label for="lastName">Apellido(s)</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <!-- apellido -->
+                            <div class="md-form">
+                                <input type="number" id="lastName" class="form-control">
+                                <label for="lastName">Tiempo</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <button type="button" onclick="registro()" class="btn btn-outline-amber">Capturar</button>
+                </form>
+                    <div>
+                        <h4>O Selecciona un archivo</h4>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input " id="customFileLang" lang="es">
+                            <label class="custom-file-label bordeselect" for="customFileLang">Seleccionar Archivo</label>
+                        </div>
+                    </div> 
+            </div>   
+           
+        </div>
+
+    </div>
+    <div class="row col-lg-12 col-md-12">
+        <div class="col-lg-3 col-md-3  py-3">
+
+            <div class="py-5">
+                 <!-- Card Wider -->
+                <div class="card card-cascade wider">
+                
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay mx-auto">
+                        <img class="imgmedallas mx-auto" src="./img/medalla2.jpg" alt="medalla2">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>        
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center pb-0">
+                
+                        <!-- Title -->
+                        <h4 class="card-title"><strong>Participante 2</strong></h4>
+                        <!-- Subtitle -->
+                        <h5 class="yellow-text pb-2"><strong>Carrera</strong></h5>                                                             
+                        <!-- Card footer -->
+                        <div class="card-footer text-muted text-center mt-4">
+                            <h3>Tiempo: <span>2:05</span></h3>
+                        </div>
+                
+                    </div>
+                
+                </div>
+                <!-- Card Wider -->
+
+            </div>
+               
+            </div>
+                    <div class="col-lg-3 col-md-3 ">
+                <!-- Card Wider -->
+                <div class="card card-cascade wider">
+                
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay mx-auto">
+                        <img class="imgmedallas mx-auto" src="./img/medalla1.jpg" alt="medalla1">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>        
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center pb-0">
+                
+                        <!-- Title -->
+                        <h4 class="card-title"><strong>Participante 1</strong></h4>
+                        <!-- Subtitle -->
+                        <h5 class="yellow-text pb-2"><strong>Carrera</strong></h5>                                                             
+                        <!-- Card footer -->
+                        <div class="card-footer text-muted text-center mt-4">
+                            <h3>Tiempo: <span>2:05</span></h3>
+                        </div>
+                
+                    </div>
+                
+                </div>
+                <!-- Card Wider -->
+
+            </div>
+                    <div class="col-lg-3 col-md-3  py-5 ">
+                        <div class="py-5">
+                            <!-- Card Wider -->
+                        <div class="card card-cascade wider ">
+                    
+                            <!-- Card image -->
+                            <div class="view view-cascade overlay mx-auto ">
+                                <img class="imgmedallas mx-auto" src="./img/medalla3.jpg" alt="medalla3">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!-- Card content -->
+                            <div class="card-body card-body-cascade text-center pb-0">
+                    
+                                <!-- Title -->
+                                <h4 class="card-title"><strong>Participante 3</strong></h4>
+                                <!-- Subtitle -->
+                                <h5 class="yellow-text pb-2"><strong>Carrera</strong></h5>
+                                <!-- Card footer -->
+                                <div class="card-footer text-muted text-center mt-4">
+                                    <h3>Tiempo: <span>2:05</span></h3>
+                                </div>
+                    
+                            </div>
+                    
+                        </div>
+                        <!-- Card Wider -->
+                        </div>
+                        
+                    
+                    </div>
+    </div>
+   
+    
+</body>
+<style>
+    .md-form input:not([type]), .md-form input[type="text"]:not(.browser-default), .md-form input[type="password"]:not(.browser-default), .md-form input[type="email"]:not(.browser-default), .md-form input[type="url"]:not(.browser-default), .md-form input[type="time"]:not(.browser-default), .md-form input[type="date"]:not(.browser-default), .md-form input[type="datetime"]:not(.browser-default), .md-form input[type="datetime-local"]:not(.browser-default), .md-form input[type="tel"]:not(.browser-default), .md-form input[type="number"]:not(.browser-default), .md-form input[type="search"]:not(.browser-default), .md-form input[type="phone"]:not(.browser-default), .md-form input[type="search-md"], .md-form textarea.md-textarea {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: transparent;
+    border: none;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+    border-bottom: 1px solid #ffa000;
+    border-radius: 0;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+}
+.bordeselect{
+    border: 1px solid  #ffa000;
+}
+.imgmedallas{
+    width: 50%;
+    height: 100%;
+}
+</style>
+</html>

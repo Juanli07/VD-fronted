@@ -82,7 +82,7 @@ function changeStatus(){
     console.log(kitState, idt)
     axios.post(`${path}/kit`, {id: idt, kitState}).then( data => {
         toastr.success('Actualizado correctamente');
-        setreporte()
+        genrep()
     }).catch(err => {
         toastr.error('¡Vaya!, algo ha sucedido.');
     }) 

@@ -72,8 +72,8 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="./addemp.html">Eventos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./addempresa.html">Empresas</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Resultados</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./ingresos.html">Dashboard</a>
@@ -117,7 +117,7 @@
                     </div>
                     
                     <div class="md-form ">
-                        <button type="button" onclick="evento()" class="btn btn-amber" id="anadir">Añadir empresa</button>
+                        <button type="button" onclick="evento()" class="btn btn-amber" id="anadir">Añadir evento</button>
                     </div>
                 </div>
                 <div class="form-group col-sm-4">
@@ -129,11 +129,7 @@
                     <div class="md-form">
                         <input type="date" id="borndate" class="form-control ">
                         <label for="borndate">Fecha del evento</label>
-                    </div>
-                    <div class="md-form">
-                        <input type="text" id="costoeven" class="form-control ">
-                        <label for="costoeven">Costo del evento</label>
-                    </div>
+                    </div>                    
                     <div class="md-form">
                         <input type="text" id="preciopar" class="form-control ">
                         <label for="preciopar">Precio por participante</label>
@@ -159,11 +155,11 @@
                     <div class="">                        
                         <span>Modalidad</span>
                         <select class="browser-default custom-select form-control" id="multiselect" multiple="multiple">
-                            <option value="1">Mixto</option>
-                            <option value="2">Hombre</option>
-                            <option value="3">Mujeres</option>
-                            <option value="4">Juvenil</option>
-                            <option value="5">Libre</option>
+                            <option value="1">Libre</option>
+                            <option value="2">Submaster</option>
+                            <option value="3">Master</option>
+                            <option value="4">Veteranos</option>
+                            <option value="5">Veteranos-plus</option>
                         </select>
                     </div>
 

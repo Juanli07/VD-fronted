@@ -43,5 +43,6 @@ function evento (){
     }
 $(document).ready(function () {
     checkAccess()
-    setName()    
+    setName()
+    setnavbar()
 });

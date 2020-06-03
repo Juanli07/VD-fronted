@@ -10,7 +10,10 @@ function registro(){
         contrasena: $('#pass').val(), cel: $('#cel').val(), salario: $(0).val()}, config).then(res => {
         localStorage.setItem('token', res.data.token)
         localStorage.setItem('user', res.data.user.nombre)
-        location.href = "../Servicios/servicios.html"
+        localStorage.setItem('email', res.data.user.email)
+        localStorage.setItem('cel', res.data.user.cel)
+        localStorage.setItem('isAdmin', res.data.user.isAdmin)
+        location.href = "../servicios.html"
                     
             
         console.log(res.data)

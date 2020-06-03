@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     
-    <!-- styles -->
-    <link rel="stylesheet" href="./css/style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -65,15 +63,15 @@
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item ">
+            <li id="ev" class="nav-item">
                 <a class="nav-link" href="./addemp.html">Eventos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./resultados.html">Resultados</a>
-            </li>
-            <li class="nav-item active">
+              </li>
+              <li id="ev1" class="nav-item">
+                <a class="nav-link " href="./resultados.html">Resultados</a>
+              </li>
+              <li id="ev2" class="nav-item active">
                 <a class="nav-link" href="./ingresos.html">Dashboard</a>
-            </li>
+              </li> 
         </ul>
             <!-- Links -->
 
@@ -85,8 +83,7 @@
                         <i class="name">User name</i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Perfil</a>
-                        <a class="dropdown-item" href="./users.html"><i class="fas fa-cogs"></i> Administrar</a>
+                        <a class="dropdown-item" id="admi" href="./users.html"><i class="fas fa-cogs"></i> Administrar</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" onclick="logout()">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </div>

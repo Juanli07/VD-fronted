@@ -27,3 +27,17 @@ $(document).ready( () => {
         $('#top').html('Ingresar')
     }
 })
+function setnavbar(){
+    if(localStorage.getItem('isAdmin') == 1){
+        $('#admi').attr('hidden', true);
+        $('#ev').attr('hidden', true);
+        $('#ev2').attr('hidden', true);
+    }
+    if(localStorage.getItem('isAdmin') == 2){
+        $('#admi').attr('hidden', true);
+        $('#ev').attr('hidden', true);
+    }
+    if(localStorage.getItem('isAdmin') == 3){
+        $('#admi').attr('hidden', true);
+    }
+}

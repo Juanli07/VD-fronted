@@ -2,6 +2,7 @@ $(document).ready(function () {
     checkAccess()
     setName()
     setEmpresas()
+    setnavbar()
 });
 
 function setEmpresas(){

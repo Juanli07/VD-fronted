@@ -43,7 +43,7 @@ function showMsg(msg) {
 function setCarreras(){
     axios.get(`${path}/convocatorias`).then( res => {
         let options = '<option value="-1">Seleccione una carrera</option>'
-        res.data.data.forEach( item => options+=`<option value="${item.id}">${item.titulo}</option>`)
+        res.data.data.forEach( item => options+=`<option data-cost="${item.precio}" value="${item.id}">${item.titulo}</option>`)
         $('#conv').html(options)
         carreras = res.data.data
     })
@@ -53,6 +53,7 @@ function setCategorias(){
     carreras.forEach( item => {
         if(item.id == $('#conv').val()){
             modalidades = item.ref_modalidad
+            $('#costoin').html('Costo: $'+item.precio+'.00')
         }
     })
     modalidades = modalidades.split(',')
@@ -61,16 +62,18 @@ function setCategorias(){
     $('#categoria').html(options)
 }   
 function setData(){
-    let name = localStorage.getItem('user').split(" ")
-    $('#email').val(localStorage.getItem('email'))
-    if(name.length == 4){
-        $('#firstName').val(name[0]+' '+name[1])
-        $('#lastName').val(name[2]+' '+name[3])
-    }else{
-        $('#firstName').val(name[0])
-        $('#lastName').val(name[1]+' '+name[2])
+    if(localStorage.getItem('isAdmin') == 1){
+        let name = localStorage.getItem('user').split(" ")
+        $('#email').val(localStorage.getItem('email'))
+        if(name.length == 4){
+            $('#firstName').val(name[0]+' '+name[1])
+            $('#lastName').val(name[2]+' '+name[3])
+        }else{
+            $('#firstName').val(name[0])
+            $('#lastName').val(name[1]+' '+name[2])
+        }
+        $('#cel').val(localStorage.getItem('cel'))
     }
-    $('#cel').val(localStorage.getItem('cel'))
 }
 function setCe(){
     axios.post(`${path}/insertcont`, {
@@ -89,4 +92,5 @@ $(document).ready( () => {
     setName()
     setCarreras()
     setData()
+    setnavbar()
 })

@@ -59,15 +59,15 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li id="ev" class="nav-item">
                     <a class="nav-link" href="./addemp.html">Eventos</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Resultados</a>
-                </li>
-                <li class="nav-item">
+                  </li>
+                  <li id="ev1" class="nav-item active">
+                    <a class="nav-link " href="./resultados.html">Resultados</a>
+                  </li>
+                  <li id="ev2" class="nav-item">
                     <a class="nav-link" href="./ingresos.html">Dashboard</a>
-                </li>
+                  </li>      
             </ul>
             <!-- Links -->
     
@@ -79,8 +79,7 @@
                         <i class="name">User name</i>
                     </button>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Perfil</a>
-                        <a class="dropdown-item" href="./users.html"><i class="fas fa-cogs"></i> Administrar</a>
+                        <a class="dropdown-item" id="admi" href="./users.html"><i class="fas fa-cogs"></i> Administrar</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" onclick="logout()">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </div>
@@ -192,6 +191,8 @@
    
     
 </body>
+<script src="js/resul.js">
+</script>
 <style>
     .md-form input:not([type]), .md-form input[type="text"]:not(.browser-default), .md-form input[type="password"]:not(.browser-default), .md-form input[type="email"]:not(.browser-default), .md-form input[type="url"]:not(.browser-default), .md-form input[type="time"]:not(.browser-default), .md-form input[type="date"]:not(.browser-default), .md-form input[type="datetime"]:not(.browser-default), .md-form input[type="datetime-local"]:not(.browser-default), .md-form input[type="tel"]:not(.browser-default), .md-form input[type="number"]:not(.browser-default), .md-form input[type="search"]:not(.browser-default), .md-form input[type="phone"]:not(.browser-default), .md-form input[type="search-md"], .md-form textarea.md-textarea {
     -webkit-box-sizing: content-box;
@@ -222,4 +223,5 @@
     margin-top: 9%;
 }
 </style>
+
 </html>

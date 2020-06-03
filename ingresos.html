@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     
     <!-- Font Awesome -->
@@ -238,7 +238,9 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="md-form">
-                            <button id="download" type="button" onclick="dwlreporte()" class="btn btn-warning">Descargar reporte</button>
+                            <button id="download" type="button" onclick="tableToExcel('articles', 'Reporte')" value="Export to Excel" class="btn btn-warning">Descargar reporte</button>
+                            
+
                         </div>
                     </div>
                 </div>
@@ -297,82 +299,34 @@
                 <div class="card">
         
                     <!-- Card header -->
-                        <div id="" class="card-header">Resultados de la carrera</div>
+                        <div id="" class="card-header">Resultados de la carrera <span class="text-danger"> BETA</span> </div>
         
                     <!--Card content-->
                     <div class="card-body">
-                        <h4>Seleciona la modalidad del evento:</h4>
                         <div>
-                            <form action="">
-                                <div class="">
-                                    <span>Modalidad</span>
-                                    <select class="browser-default custom-select form-control bordeselect" id="multidash">
-                                        <option value="1">Libre</option>
-                                        <option value="2">Submaster</option>
-                                        <option value="3">Master</option>
-                                        <option value="4">Veteranos</option>
-                                        <option value="5">Veteranos-plus</option>
-                                    </select>
+                            <div class="wrapper-editor">
+                            
+                                <div class="d-flex justify-content-center buttons-wrapper my-3">
+                                    
+                                    <button class=" btn btn-rounded text-white purple
+                                            lighten-2 btn-sm add-new-row" type="button">
+                                        <i class="fas fa-plus"></i></button>
+                                    <button class="btn btn-rounded text-white red btn-sm remove-first-tr" type="button"> <i
+                                            class="fas fa-eraser"></i></button>
                                 </div>
-                                <span>Primer lugar:</span>
-                                <div class="row col-lg-11 col-md-11 mb-4 mx-auto">
-                                    <div class="col">
-                                        <!-- nombres -->
-                                        <div class="md-form">
-                                            <input type="text" id="firstplace" class="form-control">
-                                            <label for="firstplace">Nombre completo</label>
-                                        </div>
-                                    </div>
                             
-                                    <div class="col">
-                                        <!-- apellido -->
-                                        <div class="md-form">
-                                            <input type="number" id="firsttime" class="form-control">
-                                            <label for="firsttime">Tiempo</label>
-                                        </div>
-                                    </div>
-                            
-                                </div>
-                                <span>Segundo lugar:</span>
-                                <div class="row col-lg-11 col-md-11 mb-4 mx-auto">
-                                    <div class="col">
-                                        <!-- nombres -->
-                                        <div class="md-form">
-                                            <input type="text" id="secondplace" class="form-control">
-                                            <label for="secondplace">Nombre completo</label>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="col">
-                                        <!-- apellido -->
-                                        <div class="md-form">
-                                            <input type="number" id="secondtime" class="form-control">
-                                            <label for="secondtime">Tiempo</label>
-                                        </div>
-                                    </div>
-                            
-                                </div>
-                                <span>Tercer lugar:</span>
-                                <div class="row col-lg-11 col-md-11 mb-4 mx-auto">
-                                    <div class="col">
-                                        <!-- nombres -->
-                                        <div class="md-form">
-                                            <input type="text" id="trirdplace" class="form-control">
-                                            <label for="trirdplace">Nombre completo</label>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="col">
-                                        <!-- apellido -->
-                                        <div class="md-form">
-                                            <input type="number" id="tridtime" class="form-control">
-                                            <label for="tridtime">Tiempo</label>
-                                        </div>
-                                    </div>
-                            
-                                </div>
-                                <button type="button" onclick="awards()" class="btn btn-outline-amber">Capturar</button>
-                            </form>
+                                <table id="contentEx" class="table table-striped display" cellspacing=" 0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>Posicion</th>
+                                            <th>Modalidad</th>
+                                            <th>Tiempo</th>                                                                                   
+                                        </tr>
+                                    </thead>                                    
+                                </table>
+                            </div>
+                        </div>
                             <div>
                                 <h4>O Selecciona un archivo</h4>
                                 <div class="custom-file">
@@ -409,9 +363,11 @@
         </div>
     </div>
 </body>
+<script src="./js/jquery-1.12.4.min.js"></script>
 <script src="./js/ingresos.js"></script>
 <script src="./js/graficas.js"></script>
 <script src="./js/inscripcion.js"></script>
+<script src="./js/tabletoexcel.js"></script>
 <style>
      .regevent{
         text-decoration: none;

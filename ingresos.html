@@ -238,7 +238,7 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="md-form">
-                            <button id="download" type="button" onclick="tableToExcel('articles', 'Reporte')" value="Export to Excel" class="btn btn-warning">Descargar reporte</button>
+                            <button id="download" type="button" onclick="tableToExcel('articles', 'Reporte vive deporte')" value="Export to Excel" class="btn btn-warning">Descargar reporte</button>
                             
 
                         </div>
@@ -295,7 +295,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8 col-md-8 mb-4">
+            <div class="col-lg-12 col-md-12 mb-4">
                 <div class="card">
         
                     <!-- Card header -->
@@ -306,26 +306,68 @@
                         <div>
                             <div class="wrapper-editor">
                             
-                                <div class="d-flex justify-content-center buttons-wrapper my-3">
-                                    
-                                    <button class=" btn btn-rounded text-white purple
-                                            lighten-2 btn-sm add-new-row" type="button">
-                                        <i class="fas fa-plus"></i></button>
-                                    <button class="btn btn-rounded text-white red btn-sm remove-first-tr" type="button"> <i
-                                            class="fas fa-eraser"></i></button>
-                                </div>
-                            
-                                <table id="contentEx" class="table table-striped display" cellspacing=" 0" width="100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Nombre</th>
-                                            <th>Posicion</th>
-                                            <th>Modalidad</th>
-                                            <th>Tiempo</th>                                                                                   
-                                        </tr>
-                                    </thead>                                    
-                                </table>
-                            </div>
+                            <!-- Editable table -->
+                                                   
+                               <h3>Tabla de posiciones</h3>
+                                    <div id="table" class="table-editable">
+                                        <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i class="fas fa-plus fa-2x"
+                                                    aria-hidden="true"></i></a></span>
+                                        <table class="table table-bordered table-responsive-md table-striped text-center" id="articles">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">Nombre</th>
+                                                    <th class="text-center">Modalidad</th>
+                                                    <th class="text-center">Club (opcional)</th>
+                                                    <th class="text-center">Tiempo</th>  
+                                                    <th class="text-center">Posicion</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="pt-3-half" contenteditable="true">Ejem. Luis Tuyu</td>
+                                                    <td class="pt-3-half" contenteditable="true">Ejem. Veteranos</td>
+                                                    <td class="pt-3-half" contenteditable="true">Ejm. Sin club</td>
+                                                    <td class="pt-3-half" contenteditable="true">Ejm. 2:36</td>                                                   
+                                                    <td class="pt-3-half">
+                                                        <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up"
+                                                                    aria-hidden="true"></i></a></span>
+                                                        <span class="table-down"><a href="#!" class="indigo-text"><i
+                                                                    class="fas fa-long-arrow-alt-down" aria-hidden="true"></i></a></span>
+                                                    </td>
+                                                    <td>
+                                                        <span class="table-remove"><button type="button"
+                                                                class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                                    </td>
+                                                </tr>
+                                                <!-- This is our clonable table line -->
+                                                
+                                                <!-- This is our clonable table line -->
+                                            <tr>
+                                                <td class="pt-3-half" contenteditable="true">Ejem. Felipe MEdina</td>
+                                                <td class="pt-3-half" contenteditable="true">Ejem. Veteranos</td>
+                                                <td class="pt-3-half" contenteditable="true">Ejm. Sin club</td>
+                                                <td class="pt-3-half" contenteditable="true">Ejm. 1:36</td>
+                                                <td class="pt-3-half">
+                                                    <span class="table-up"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-up"
+                                                                aria-hidden="true"></i></a></span>
+                                                    <span class="table-down"><a href="#!" class="indigo-text"><i class="fas fa-long-arrow-alt-down"
+                                                                aria-hidden="true"></i></a></span>
+                                                </td>
+                                                <td>
+                                                    <span class="table-remove"><button type="button"
+                                                            class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>
+                                                </td>
+                                            </tr>
+                                                <!-- This is our clonable table line -->
+                                          
+                                            </tbody>
+                                        </table>
+                                    </div>
+                             
+                        
+                            <!-- Editable table -->
+                           
                         </div>
                             <div>
                                 <h4>O Selecciona un archivo</h4>
@@ -363,11 +405,12 @@
         </div>
     </div>
 </body>
-<script src="./js/jquery-1.12.4.min.js"></script>
+<script src="./js/jquery-1.12.4.min.js" ></script>
 <script src="./js/ingresos.js"></script>
 <script src="./js/graficas.js"></script>
 <script src="./js/inscripcion.js"></script>
 <script src="./js/tabletoexcel.js"></script>
+<script src="./js/tablaplaces.js" ></script>
 <style>
      .regevent{
         text-decoration: none;

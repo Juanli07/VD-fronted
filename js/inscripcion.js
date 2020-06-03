@@ -22,13 +22,14 @@ function inscripcion() {
     }).catch(err => {
         console.log(err)
     })
+    console.log($('#id_usuario').val())
     axios.post(`${path}/insertins`, {
         id_convocatoria: $('#conv').val(),
         id_usuario: $('#id_usuario').val(),
         modalidad: $('#categoria').val(),
         numero_participante: $('#numpart').val()
     }).then( res => {
-        location.href = "../inscripciones.html"
+        // location.href = "../inscripciones.html"
     }).catch(err => {
 
     })

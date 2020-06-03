@@ -23,11 +23,11 @@ function setreporte(){
     let row = ""
     axios.post(`${path}/report`, {id_convocatoria: $('#conv').val()}, config).then( res => {
         let ins = res.data.inscripcion
-        let part = res.data.part
-        for(let i = 0; i < part.length; i++){
+        let participante = res.data.part
+        console.log(participante);
+        for(let i = 0; i < participante.length; i++){
             kitState = ins[i].kitState.split('|')
-            console.log(part[i].nombre)
-            row += `<tr><td>${part[i].nombre}</td><td>${ins[i].modalidad}</td><td>${kitState[0] != 0 ? 'Playera': ''} ${kitState[1] != 0 ? 'Mochila': ''} ${kitState[2] != 0 ? 'Numero': ''}</td><td><a type="button" data-toggle="modal" onclick="setmodal(${ins[i].id}, '${ins[i].kitState}')" data-target="#basicExampleModal"><i class="fas fa-chevron-circle-up"></i></a></td></tr>`
+            row += `<tr><td>${participante[i].nombre}</td><td>${ins[i].modalidad}</td><td>${kitState[0] != 0 ? 'Playera': ''} ${kitState[1] != 0 ? 'Mochila': ''} ${kitState[2] != 0 ? 'Numero': ''}</td><td><a type="button" data-toggle="modal" onclick="setmodal(${ins[i].id}, '${ins[i].kitState}')" data-target="#basicExampleModal"><i class="fas fa-chevron-circle-up"></i></a></td></tr>`
         }
         $('.bd').html(row);
 

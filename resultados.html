@@ -37,118 +37,67 @@
     <title>Resultados</title>
 </head>
 <body>
-    <div class="col-lg-6 col-md-6 mb-4">
-        <div class="card">
+    <!--Navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark unique-color-dark">
     
-            <!-- Card header -->
-            <div id="participantesd" class="card-header">Resultados de la carrera</div>
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="./index.html"><img src="../img/logo.png" alt=""></a>
     
-            <!--Card content-->
-            <div class="card-body">                
-                <h4>Seleciona la modalidad del evento:</h4>
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     
-                <form action="">
-                    <div class="">
-                        <span>Modalidad</span>
-                        <select class="browser-default custom-select form-control bordeselect" id="multiselect">
-                            <option value="1">Libre</option>
-                            <option value="2">Submaster</option>
-                            <option value="3">Master</option>
-                            <option value="4">Veteranos</option>
-                            <option value="5">Veteranos-plus</option>
-                        </select>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+    
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="./inscripciones.html">Inscripciones
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./addemp.html">Eventos</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Resultados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./ingresos.html">Dashboard</a>
+                </li>
+            </ul>
+            <!-- Links -->
+    
+            <form class="form-inline">
+                <div class="btn-group">
+                    <button class="btn btn-outline-warning btn-rounded btn-sm dropdown-toggle" type="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="../img/xd.png" alt="">
+                        <i class="name">User name</i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#"><i class="fas fa-address-card"></i> Perfil</a>
+                        <a class="dropdown-item" href="./users.html"><i class="fas fa-cogs"></i> Administrar</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" onclick="logout()">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
                     </div>
-                    <span>Primer lugar:</span>                   
-                    <div class="row col-lg-11 col-md-11 mb-4 mx-auto">                                                                      
-                        <div class="col">
-                            <!-- nombres -->
-                            <div class="md-form">
-                                <input type="text" id="firstName" class="form-control">
-                                <label for="firstName">Nombre(s)</label>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <!-- apellido -->
-                            <div class="md-form">
-                                <input type="text" id="lastName" class="form-control">
-                                <label for="lastName">Apellido(s)</label>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <!-- apellido -->
-                            <div class="md-form">
-                                <input type="number" id="lastName" class="form-control">
-                                <label for="lastName">Tiempo</label>
-                            </div>
-                        </div>
-                    
-                    </div>      
-                    <span>Segundo lugar:</span>
-                    <div class="row col-lg-11 col-md-11 mb-4 mx-auto">
-                        <div class="col">
-                            <!-- nombres -->
-                            <div class="md-form">
-                                <input type="text" id="firstName" class="form-control">
-                                <label for="firstName">Nombre(s)</label>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <!-- apellido -->
-                            <div class="md-form">
-                                <input type="text" id="lastName" class="form-control">
-                                <label for="lastName">Apellido(s)</label>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <!-- apellido -->
-                            <div class="md-form">
-                                <input type="number" id="lastName" class="form-control">
-                                <label for="lastName">Tiempo</label>
-                            </div>
-                        </div>
-                      
-                    </div>
-                    <span>Tercer lugar:</span>
-                    <div class="row col-lg-11 col-md-11 mb-4 mx-auto">
-                        <div class="col">
-                            <!-- nombres -->
-                            <div class="md-form">
-                                <input type="text" id="firstName" class="form-control">
-                                <label for="firstName">Nombre(s)</label>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <!-- apellido -->
-                            <div class="md-form">
-                                <input type="text" id="lastName" class="form-control">
-                                <label for="lastName">Apellido(s)</label>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <!-- apellido -->
-                            <div class="md-form">
-                                <input type="number" id="lastName" class="form-control">
-                                <label for="lastName">Tiempo</label>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <button type="button" onclick="registro()" class="btn btn-outline-amber">Capturar</button>
-                </form>
-                    <div>
-                        <h4>O Selecciona un archivo</h4>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input " id="customFileLang" lang="es">
-                            <label class="custom-file-label bordeselect" for="customFileLang">Seleccionar Archivo</label>
-                        </div>
-                    </div> 
-            </div>   
-           
+                </div>
+            </form>
         </div>
-
-    </div>
-    <div class="row col-lg-12 col-md-12">
-        <div class="col-lg-3 col-md-3  py-3">
+        <!-- Collapsible content -->
+    </nav>
+    <div class="col-lg-12 col-md-12 mx-auto">
+        <br>
+        <br>
+        <br>
+        <h3 class="">Resultados del ultimo evento:</h3>
+    </div>    
+    <div class="row col-lg-12 col-md-12 "> 
+                    
+        <div class="col-lg-4 col-md-4  py-3">
 
             <div class="py-5">
                  <!-- Card Wider -->
@@ -180,7 +129,7 @@
             </div>
                
             </div>
-                    <div class="col-lg-3 col-md-3 ">
+                    <div class="col-lg-4 col-md-4 ">
                 <!-- Card Wider -->
                 <div class="card card-cascade wider">
                 
@@ -208,7 +157,7 @@
                 <!-- Card Wider -->
 
             </div>
-                    <div class="col-lg-3 col-md-3  py-5 ">
+                    <div class="col-lg-4 col-md-4  py-5 ">
                         <div class="py-5">
                             <!-- Card Wider -->
                         <div class="card card-cascade wider ">
@@ -268,6 +217,9 @@
 .imgmedallas{
     width: 50%;
     height: 100%;
+}
+.margenaw{
+    margin-top: 9%;
 }
 </style>
 </html>

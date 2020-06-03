@@ -6,7 +6,7 @@ function genrep() {
         datostxt.push($(this).text());        
     });   
     
-    var lineDiv = document.getElementById('plotlyChart');
+   /* var lineDiv = document.getElementById('plotlyChart');
     var data = [
             {
                 //nombre de las carreras
@@ -20,7 +20,7 @@ function genrep() {
         title: 'Participantes/carrera'
     };
 
-    Plotly.newPlot(lineDiv, data, layout);    
+    Plotly.newPlot(lineDiv, data, layout);    */
 
     var lineDiv2 = document.getElementById('plotlyChart2');
     var data2 = [{

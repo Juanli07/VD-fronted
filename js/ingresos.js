@@ -1,4 +1,21 @@
 let idt;
+toastr.options = {
+    "closeButton": false,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-bottom-right",
+    "preventDuplicates": false,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+}
 $(document).ready( function(){
     checkAccess()
     setName()
@@ -24,7 +41,6 @@ function setreporte(){
     axios.post(`${path}/report`, {id_convocatoria: $('#conv').val()}, config).then( res => {
         let ins = res.data.inscripcion
         let participante = res.data.part
-        console.log(participante);
         for(let i = 0; i < participante.length; i++){
             kitState = ins[i].kitState.split('|')
             row += `<tr><td>${participante[i].nombre}</td><td>${ins[i].modalidad}</td><td>${kitState[0] != 0 ? 'Playera': ''} ${kitState[1] != 0 ? 'Mochila': ''} ${kitState[2] != 0 ? 'Numero': ''}</td><td><a type="button" data-toggle="modal" onclick="setmodal(${ins[i].id}, '${ins[i].kitState}')" data-target="#basicExampleModal"><i class="fas fa-chevron-circle-up"></i></a></td></tr>`
@@ -81,7 +97,6 @@ function changeStatus(){
             kitState += '0|'
         }
     }
-    console.log(kitState, idt)
     axios.post(`${path}/kit`, {id: idt, kitState}).then( data => {
         toastr.success('Actualizado correctamente');
         genrep()

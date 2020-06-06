@@ -22,6 +22,7 @@ function inscripcion() {
     }).catch(err => {
         console.log(err)
     })
+    $('#spin').attr('hidden', false);
     setTimeout( ()=>{
         axios.post(`${path}/insertins`, {
             id_convocatoria: $('#conv').val(),
@@ -29,10 +30,14 @@ function inscripcion() {
             modalidad: $('#categoria').val(),
             numero_participante: $('#numpart').val()
         }).then(res => {
-            location.href = "../inscripciones.html"
+            setTimeout( () => {
+                location.href = "../inscripciones.html"
+            },3000)
+            toastr.success('Inscripción realizada');
         }).catch(err => {
-
+            toastr.error('¡Vaya!, algo ha sucedido.');
         })
+        $('#spin').atrr('hidden', false);
     }, 3000)
     console.log($('#id_usuario').val())
 

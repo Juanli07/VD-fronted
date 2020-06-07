@@ -67,7 +67,8 @@
                             <label for="password" data-error="wrong" data-success="right">Contraseña</label>
                         </div>
                         <div class="md-form">
-                            <a href="">¿Olvidaste tu contraseña?</a>
+                            <a href="" onclick="mensajecont()">¿Olvidaste tu contraseña?</a>
+                            <p id="msg" > </p>
                         </div>
                         <button type="button" onclick="login()" class="btn btn-outline-amber">Entrar</button>
                     </form>
@@ -166,6 +167,20 @@
 </body>
 <script src="./js/login.js"></script>
 <script src="./js/registro.js"></script>
+<script>
+    let liga
+function mensajecont() {
+     var olvido         
+    if (confirm("Comuniquese con el administrador o a travez de la pagina oficial en facebook ViveDeportemx") == true) {        
+        olvido = "Ok";
+    } else {
+        olvido = "Cancelado";
+    }
+
+    document.getElementById("msg").innerHTML = olvido; 
+}
+
+</script>
 </html>
 <style> 
     .logmargen{

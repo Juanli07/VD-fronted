@@ -25,8 +25,14 @@ function evento (){
         datostxt.push($(this).text());
         datosvalue.push($(this).val());
     });             
-     
-    axios.post(`http://localhost:3000/vd/insertconv`,{        
+    let config = {
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8',
+            "Access-Control-Allow-Origin": "*",
+        }
+    };
+    console.log(b64)
+    axios.post(`${path}/insertconv`,{        
         id_empresa: $('#emp').val(),
         titulo: $('#evento').val(),
         banner: b64,
@@ -35,10 +41,10 @@ function evento (){
         ref_modalidad: datostxt.toString(),
         precio: $('#preciopar').val(),
         num_participantes: $('#numpar').val()
-    }).then((data) => {
+    }, config).then((data) => {
         toastr.success('Evento creado satisfactoriamente');
     }).catch(error => {
-        console.log(error.body)
+        console.log(error)
         toastr.error('Error al crear evento');
     })
     }

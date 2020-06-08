@@ -32,13 +32,13 @@ function inscripcion() {
         }).then(res => {
             setTimeout( () => {
                 location.href = "../inscripciones.html"
-            },6000)
+            },8000)
             toastr.success('Inscripción realizada');
         }).catch(err => {
             toastr.error('¡Vaya!, algo ha sucedido.');
         })
         $('#spin').atrr('hidden', false);
-    }, 3000)
+    }, 8000)
     console.log($('#id_usuario').val())
 
   

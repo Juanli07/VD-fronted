@@ -102,5 +102,15 @@ function changeStatus(){
         genrep()
     }).catch(err => {
         toastr.error('¡Vaya!, algo ha sucedido.');
-    }) 
+    })
 }
+function setDoc(){
+    setTimeout( () => {
+        alert('Archivo subido con éxito'); 
+        $('#customFileLang').attr('disabled', true)
+    }, 3000);
+}
+
+$('#customFileLang').change( ( ) => {
+    $('#sends').attr('disabled', false);
+})

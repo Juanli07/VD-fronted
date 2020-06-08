@@ -78,9 +78,12 @@ function setData(){
         if(name.length == 4){
             $('#firstName').val(name[0]+' '+name[1])
             $('#lastName').val(name[2]+' '+name[3])
-        }else{
+        }else if(name.length == 3){
             $('#firstName').val(name[0])
             $('#lastName').val(name[1]+' '+name[2])
+        }else if(name.length == 2){
+            $('#firstName').val(name[0]);
+            $('#laststName').val(name[1]);
         }
         $('#cel').val(localStorage.getItem('cel'))
     }

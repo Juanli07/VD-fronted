@@ -32,7 +32,7 @@ function inscripcion() {
         }).then(res => {
             setTimeout( () => {
                 location.href = "../inscripciones.html"
-            },3000)
+            },6000)
             toastr.success('Inscripción realizada');
         }).catch(err => {
             toastr.error('¡Vaya!, algo ha sucedido.');

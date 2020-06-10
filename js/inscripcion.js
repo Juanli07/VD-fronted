@@ -101,7 +101,6 @@ function setCe(){
     })
 }
 $(document).ready( () => {
-    checkAccess()
     setName()
     setCarreras()
     setData()

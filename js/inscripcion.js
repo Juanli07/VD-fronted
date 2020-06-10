@@ -34,14 +34,15 @@ function inscripcion() {
             setTimeout( () => {
                 location.href = "../inscripciones.html"
             },8000)
+            var datos = obtenerDatos();
+            descargarArchivo(generarTexto(datos), 'Factura_inscripción.txt');
             toastr.success('Inscripción realizada');
         }).catch(err => {
             toastr.error('¡Vaya!, algo ha sucedido.');
         })
         $('#spin').atrr('hidden', false);
     }, 8000)
-    console.log($('#id_usuario').val())    
-  
+    console.log($('#id_usuario').val())             
 }
 function showMsg(msg) {
     $('#msg').attr('hidden', false);
@@ -187,12 +188,6 @@ texto.push('        Pago de inscripcion a carrera/evento\n');
         type: 'text/plain'
     });
 };
-
-document.getElementById('boton-txt').addEventListener('click', function () {
-    var datos = obtenerDatos();
-    descargarArchivo(generarTexto(datos), 'Factura_inscripción.txt');
-}, false);
-
 
 $(document).ready( () => {
     checkAccess()

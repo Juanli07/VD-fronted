@@ -313,7 +313,43 @@
                         </div>
                 
                     </div>
-                </div>              
+                </div> 
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Corte diario
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Concepto</th>
+                                    <th>Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="corte">
+                                <tr>
+                                    <td>Inscripcion</td>
+                                    <td>$ 300.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Inscripcion</td>
+                                    <td>$ 100.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Inscripcion</td>
+                                    <td>$ 100.00</td>
+                                </tr>
+                                <tr>
+                                    <td>total</td>
+                                    <td>$ 500.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="card-footer">
+                            <button data-toggle="modal" data-target="#basicExampleModal" onclick="setCorte()"class="btn btn-warning">Realizar corte</button>
+                        </div>
+                    </div>
+                </div>             
             </div>
             
         </div>
@@ -333,7 +369,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" onclick="changeStatus()" data-dismiss="modal" class="btn btn-primary">Save changes</button>
+                <button id="br" type="button" onclick="changeStatus()" data-dismiss="modal" class="btn btn-primary">Save changes</button>
             </div>
             </div>
         </div>

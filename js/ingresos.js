@@ -110,6 +110,21 @@ function setDoc(){
         $('#customFileLang').attr('disabled', true)
     }, 3000);
 }
+function setCorte(){
+    $('#corte').html('');
+    let total = 500;
+    toastr.success('El corte de caja ha sido realizado');
+    $('.modal-title').html('');
+    $('.modal-body').html(`<h1>Corte de caja</h1><br><h3>${setDate(new Date())}</h3><br><p> Total del dia: $ ${total}.00`)
+    $('#br').attr('onclick', false);
+}
+
+function setDate(date){
+    var fecha = new Date(date);
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    
+    return fecha.toLocaleDateString("es-ES", options)
+ }
 
 $('#customFileLang').change( ( ) => {
     $('#sends').attr('disabled', false);

@@ -190,7 +190,6 @@ texto.push('        Pago de inscripcion a carrera/evento\n');
 };
 
 $(document).ready( () => {
-    checkAccess()
     setName()
     setCarreras()
     setData()

@@ -39,5 +39,11 @@ function setnavbar(){
     }
     if(localStorage.getItem('isAdmin') == 3){
         $('#admi').attr('hidden', true);
+    }else if(!localStorage.getItem('isAdmin')){
+        $('#admi').attr('hidden', true);
+        $('#ev').attr('hidden', true);
+        $('#ev1').attr('hidden', true);
+        $('#ev2').attr('hidden', true);
+        $('.xd').html('<div class="collapse navbar-collapse" id="navbarTogglerDemo02"><ul class="navbar-nav ml-auto smooth-scroll"><li class="nav-item"><a class="nav-link" href="eventos.html" data-offset="90">Eventos</a></li><li class="nav-item"><a id="top" class="nav-link" href="login.html" data-offset="90">Ingresar</a></li></ul></div>')
     }
 }
